@@ -56,8 +56,15 @@
 
 ## Для тех кто любит держать руку на пульсе и делать все сам. 
 
-В Visual Studio Code добавте эти строки в свой [settings.json](https://code.visualstudio.com/docs/getstarted/settings) и делайте как вам нравится) Удачи =)
+В Visual Studio Code добавте эти строки в свой [settings.json](https://code.visualstudio.com/docs/getstarted/settings) и делайте как вам нравится) Удачи =);
 
+
+![Запись экрана 2022-09-17 в 15 55 06](https://user-images.githubusercontent.com/63866043/190858425-4f7982c7-77f0-4492-9c2e-4ec6d9104651.gif)
+
+Вы также можете открыть редактор настроек из палитры команд (⇧⌘P) с помощью Preferences: Open Settings 
+и ввести 
+
+Developer: Inspect Editor Tokens and Scorps
 
 ```json 
 
