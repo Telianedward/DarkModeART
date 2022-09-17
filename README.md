@@ -1,6 +1,36 @@
-# dark-mod-art README
+# DarkModeART
+[![Marketplace](https://vsmarketplacebadge.apphb.com/version/akamud.vscode-theme-onelight.svg)](https://marketplace.visualstudio.com/items/akamud.vscode-theme-onelight) [![Installs](https://vsmarketplacebadge.apphb.com/installs/akamud.vscode-theme-onelight.svg)](https://marketplace.visualstudio.com/items/akamud.vscode-theme-onelight) [![Ratings](https://vsmarketplacebadge.apphb.com/rating-short/akamud.vscode-theme-onelight.svg)](https://marketplace.visualstudio.com/items/akamud.vscode-theme-onelight)
+[![Beerpay](https://img.shields.io/beerpay/akamud/vscode-theme-onelight.svg)](https://beerpay.io/akamud/vscode-theme-onelight)  
+
+![darkmodeART](https://user-images.githubusercontent.com/63866043/190853754-ea3fdd2f-e4f8-4b6f-a739-688c7aea2dcd.png)
 
 ## Working with Markdown
+
+## для направляющих 
+
+
+
+```json
+/ Определяет, включены ли направляющие пар скобок или нет.
+  // - true: Включает направляющие пары скобок.
+  // - активно: Включает направляющие пары скобок только для активной пары скобок.
+  // - false: Отключает направляющие пары скобок.
+  "editor.guides.bracketPairs": "active",
+// Определяет, включены ли направляющие пар горизонтальных скобок или нет.
+  // - true: Включает горизонтальные направляющие в дополнение к вертикальным направляющим пар кронштейнов.
+  // - active: Включает горизонтальные направляющие только для активной пары кронштейнов.
+  // - false: Отключает направляющие пары горизонтальных скобок.
+  "editor.guides.bracketPairsHorizontal": "active",
+  // Управляет тем, должна ли выделяться активная пара квадратных скобок в редакторе.
+  "editor.guides.highlightActiveBracketPair": true,
+// Определяет, включены ли направляющие пар горизонтальных скобок или нет.
+  // - true: Включает горизонтальные направляющие в дополнение к вертикальным направляющим пар кронштейнов.
+  // - активно: Включает горизонтальные направляющие только для активной пары кронштейнов.
+  // - false: Отключает направляющие пары горизонтальных скобок
+```
+
+
+
 
 You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
 
@@ -9,6 +39,8 @@ You can author your README using Visual Studio Code. Here are some useful editor
 * Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
 video1.gif
 ## For more information
+
+[settings.json](https://code.visualstudio.com/docs/getstarted/settings) 
 
 * [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
 * [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
