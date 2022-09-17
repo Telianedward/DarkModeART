@@ -5,13 +5,17 @@
 ![darkmodeART](https://user-images.githubusercontent.com/63866043/190853754-ea3fdd2f-e4f8-4b6f-a739-688c7aea2dcd.png)
 https://marketplace.visualstudio.com/items?itemName=telianedward.dark-mod-art
 ## Working with Markdown
-## направляющие для пары 
+## направляющие для пары
+![Запись экрана 2022-09-17 в 15 07 22](https://user-images.githubusercontent.com/63866043/190855932-866fe81e-55bb-4bc6-ade5-4418cc711666.gif)
+для включения направляющих в Visual Studio Code добавте эти строки в свой [settings.json](https://code.visualstudio.com/docs/getstarted/settings)
 ```json
   // Определяет, включена ли раскраска пары скобок или нет. Используйте `workbench.colorCustomizations`, чтобы переопределить цвета подсветки скобок.
   "editor.bracketPairColorization.enabled": true,
   // Определяет, имеет ли каждый тип скобок собственный независимый пул цветов..
   "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
 ```
+
+
 
 ## направляющие для пары скобок
 
