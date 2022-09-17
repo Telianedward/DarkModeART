@@ -1,21 +1,68 @@
 {
   "name": "dark-mod-art",
   "displayName": "dark-mod-art",
-  "description": " Dark theme",
-  "version": "0.0.1",
+  "description": "Mode Theme",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.71.0"
   },
   "categories": [
     "Themes"
   ],
-  "contributes": {
-    "themes": [
-      {
-        "label": "Dark mode ART",
-        "uiTheme": "vs-dark",
-        "path": "./themes/Dark mode ART-color-theme.json"
-      }
-    ]
-  }
+
+	"preview": true,
+	"publisher": "GitHub",
+	"license": "MIT",
+	"icon": "icon.png",
+	"galleryBanner": {
+		"color": "#1b1f23",
+		"theme": "dark"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/primer/github-vscode-theme"
+	},
+	"bugs": {
+		"url": "https://github.com/primer/github-vscode-theme/issues"
+	},
+
+	"keywords": [
+		"theme",
+		"light",
+		"dark"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Mode Light Default",
+				"uiTheme": "vs",
+				"path": "./themes/light-default.json"
+			},
+			{
+				"label": "Mode Dark Default",
+				"uiTheme": "vs-dark",
+				"path": "./themes/dark-default.json"
+			},
+			{
+				"label": "Mode Dark Dimmed",
+				"uiTheme": "vs-dark",
+				"path": "./themes/dark-dimmed.json"
+			},
+			{
+				"label": "Mode Dark High Contrast",
+				"uiTheme": "hc-black",
+				"path": "./themes/dark-high-contrast.json"
+			}
+		]
+	},
+	"devDependencies": {
+		"@primer/primitives": "4.7.1",
+		"chroma-js": "^2.1.0",
+		"color": "^3.1.2",
+		"nodemon": "^2.0.3"
+	},
+	"scripts": {
+		"start": "nodemon --watch src src/index.js",
+		"build": "node src/index.js"
+	}
 }
