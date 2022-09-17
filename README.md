@@ -10,7 +10,7 @@ https://marketplace.visualstudio.com/items?itemName=telianedward.dark-mod-art
 
 
 
-<img width="620" alt="Снимок экрана 2022-09-17 в 14 21 59" src="https://user-images.githubusercontent.com/63866043/190854076-08ba6b91-1313-452c-bbf2-7ace76cd9e2c.png">
+![Запись экрана 2022-09-17 в 14 29 08](https://user-images.githubusercontent.com/63866043/190854516-3c9e380a-8315-4ed8-902f-082be62b5eec.gif)
 
 для включения направляющих в Visual Studio Code добавте эти строки в свой [settings.json](https://code.visualstudio.com/docs/getstarted/settings)
 
@@ -33,7 +33,6 @@ https://marketplace.visualstudio.com/items?itemName=telianedward.dark-mod-art
   // - false: Отключает направляющие пары горизонтальных скобок
 ```
 
-<img width="386" alt="Снимок экрана 2022-09-17 в 14 21 41" src="https://user-images.githubusercontent.com/63866043/190854068-ce6a42c8-73c9-4e08-8ddc-b525d60ac094.png">
 
 
 
