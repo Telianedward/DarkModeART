@@ -5,8 +5,15 @@
 ![darkmodeART](https://user-images.githubusercontent.com/63866043/190853754-ea3fdd2f-e4f8-4b6f-a739-688c7aea2dcd.png)
 https://marketplace.visualstudio.com/items?itemName=telianedward.dark-mod-art
 ## Working with Markdown
+## направляющие для пары 
+```json
+  // Определяет, включена ли раскраска пары скобок или нет. Используйте `workbench.colorCustomizations`, чтобы переопределить цвета подсветки скобок.
+  "editor.bracketPairColorization.enabled": true,
+  // Определяет, имеет ли каждый тип скобок собственный независимый пул цветов..
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
+```
 
-## направляющие для пары скобок  включаются 
+## направляющие для пары скобок
 
 
 ![Запись экрана 2022-09-17 в 14 43 19](https://user-images.githubusercontent.com/63866043/190855337-d6838f68-5cec-4f07-b38b-69589721b19c.gif)
