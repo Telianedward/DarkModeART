@@ -9,8 +9,9 @@ https://marketplace.visualstudio.com/items?itemName=telianedward.dark-mod-art
 ## направляющие для пары скобок  включаются 
 
 
+![Запись экрана 2022-09-17 в 14 43 19](https://user-images.githubusercontent.com/63866043/190855337-d6838f68-5cec-4f07-b38b-69589721b19c.gif)
 
-![Запись экрана 2022-09-17 в 14 29 08](https://user-images.githubusercontent.com/63866043/190854516-3c9e380a-8315-4ed8-902f-082be62b5eec.gif)
+
 
 для включения направляющих в Visual Studio Code добавте эти строки в свой [settings.json](https://code.visualstudio.com/docs/getstarted/settings)
 
