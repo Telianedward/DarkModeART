@@ -1,0 +1,21 @@
+{
+  "name": "dark-mod-art",
+  "displayName": "dark-mod-art",
+  "description": " Dark theme",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.71.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Dark mode ART",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Dark mode ART-color-theme.json"
+      }
+    ]
+  }
+}
