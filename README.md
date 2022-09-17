@@ -56,3 +56,5 @@ https://marketplace.visualstudio.com/items?itemName=telianedward.dark-mod-art
 ![gif3](https://user-images.githubusercontent.com/63866043/190834374-4d7227da-bcfc-43be-93ab-cea99ff194c9.gif)
 ## пример вида темы в js
 ![gif4](https://user-images.githubusercontent.com/63866043/190834393-30d86014-f32b-49a3-bffe-bb3520a1c69b.gif)
+## пример вида темы в react .ts итд 
+![Запись экрана 2022-09-17 в 15 32 13](https://user-images.githubusercontent.com/63866043/190857061-043a9470-6fc5-4f04-8437-f15e548a5ce9.gif)
