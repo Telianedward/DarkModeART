@@ -1,8 +1,8 @@
 {
-  "name": "dark-mod-art",
-  "displayName": "dark-mod-art",
-  "description": "Mode Theme",
-  "version": "0.0.2",
+  "name": "theme-mode-art",
+  "displayName": "Theme Mode ART",
+  "description": "Mode theme for VS Code",
+  "version": "0.0.1",
   "engines": {
     "vscode": "^1.71.0"
   },
@@ -11,19 +11,19 @@
   ],
 
 	"preview": true,
-	"publisher": "GitHub",
+	"publisher": "telianedward",
 	"license": "MIT",
-	"icon": "icon.png",
+	"icon": "TMA.png",
 	"galleryBanner": {
-		"color": "#1b1f23",
+		"color": "#232323",
 		"theme": "dark"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/primer/github-vscode-theme"
+		"url": "https://github.com/telianedward/DarkModeART"
 	},
 	"bugs": {
-		"url": "https://github.com/primer/github-vscode-theme/issues"
+		"url": "https://github.com/telianedward/DarkModeART//issues"
 	},
 
 	"keywords": [
