@@ -3,12 +3,16 @@
 [![Beerpay](https://img.shields.io/beerpay/akamud/vscode-theme-onelight.svg)](https://beerpay.io/akamud/vscode-theme-onelight)  
 
 ![darkmodeART](https://user-images.githubusercontent.com/63866043/190853754-ea3fdd2f-e4f8-4b6f-a739-688c7aea2dcd.png)
-
+https://marketplace.visualstudio.com/items?itemName=telianedward.dark-mod-art
 ## Working with Markdown
 
-## для направляющих 
+## направляющие для пары скобок  включаются 
 
 
+
+<img width="620" alt="Снимок экрана 2022-09-17 в 14 21 59" src="https://user-images.githubusercontent.com/63866043/190854076-08ba6b91-1313-452c-bbf2-7ace76cd9e2c.png">
+
+для включения направляющих в Visual Studio Code добавте эти строки в свой [settings.json](https://code.visualstudio.com/docs/getstarted/settings)
 
 ```json
 / Определяет, включены ли направляющие пар скобок или нет.
@@ -29,6 +33,7 @@
   // - false: Отключает направляющие пары горизонтальных скобок
 ```
 
+<img width="386" alt="Снимок экрана 2022-09-17 в 14 21 41" src="https://user-images.githubusercontent.com/63866043/190854068-ce6a42c8-73c9-4e08-8ddc-b525d60ac094.png">
 
 
 
