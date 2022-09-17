@@ -6,7 +6,9 @@
 https://marketplace.visualstudio.com/items?itemName=telianedward.dark-mod-art
 ## Working with Markdown
 ## направляющие для пары
-![Запись экрана 2022-09-17 в 15 07 22](https://user-images.githubusercontent.com/63866043/190855932-866fe81e-55bb-4bc6-ade5-4418cc711666.gif)
+
+![Запись экрана 2022-09-17 в 15 07 22](https://user-images.githubusercontent.com/63866043/190856188-5be6c7f0-b4ac-43c5-a00c-75a275637959.gif)
+
 для включения направляющих в Visual Studio Code добавте эти строки в свой [settings.json](https://code.visualstudio.com/docs/getstarted/settings)
 ```json
   // Определяет, включена ли раскраска пары скобок или нет. Используйте `workbench.colorCustomizations`, чтобы переопределить цвета подсветки скобок.
@@ -20,8 +22,8 @@ https://marketplace.visualstudio.com/items?itemName=telianedward.dark-mod-art
 ## направляющие для пары скобок
 
 
-![Запись экрана 2022-09-17 в 14 43 19](https://user-images.githubusercontent.com/63866043/190855337-d6838f68-5cec-4f07-b38b-69589721b19c.gif)
 
+![Запись экрана 2022-09-17 в 15 11 12](https://user-images.githubusercontent.com/63866043/190856236-961ea600-a6bc-4d17-9829-bcbe346b51e1.gif);
 
 
 для включения направляющих в Visual Studio Code добавте эти строки в свой [settings.json](https://code.visualstudio.com/docs/getstarted/settings)
