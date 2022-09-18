@@ -20,7 +20,7 @@ function hex(color) {
 // 4.Per theme.Useful when a certain theme needs an exception
 //    e.g."textLink.foreground" : themes({ l : scale.blue[5], d : scale.blue[2], dd : scale.blue[3], hc : scale.blue[3] }),
 
-function getTheme({ theme, name }) => {
+function getTheme({ theme, name }) {
   const themes = (options) => options[theme], // Usage : themes({ l : "lightblue", d : "darkblue", dd : "royalblue", hc : "blue" })
         color = getColors(theme), // Usage : color.fg.default
         scale = color.scale, // Usage : scale.blue[6]
