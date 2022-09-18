@@ -36,52 +36,52 @@
 			{
 				"label": "AtomAx mode Light",
 				"uiTheme": "vs",
-				"path": "./themes/light.json"
+				"path": "./themes/my-light.json"
 			},
 			{
 				"label": "AtomAx mode Light High Contrast",
 				"uiTheme": "hc-light",
-				"path": "./themes/light_high_contrast.json"
+				"path": "./themes/my-light_high_contrast.json"
 			},
 			{
 				"label": "AtomAx mode Light Colorblind",
 				"uiTheme": "vs",
-				"path": "./themes/light_colorblind.json"
+				"path": "./themes/my-light_colorblind.json"
 			},
 			{
 				"label": "AtomAx mode Light Tritanopia",
 				"uiTheme": "hc-light",
-				"path": "./themes/light_tritanopia.json"
+				"path": "./themes/my-light_tritanopia.json"
 			},
 			{
 				"label": "AtomAx mode Dark",
 				"uiTheme": "vs-dark",
-				"path": "./themes/dark.json"
+				"path": "./themes/my-dark.json"
 			},
 			{
 				"label": "AtomAx mode Dark Dimmed",
 				"uiTheme": "vs-dark",
-				"path": "./themes/dark_dimmed.json"
+				"path": "./themes/my-dark_dimmed.json"
 			},
 			{
 				"label": "AtomAx mode Dark High Contrast",
 				"uiTheme": "hc-black",
-				"path": "./themes/dark_high_contrast.json"
+				"path": "./themes/my-dark_high_contrast.json"
 			},
 			{
 				"label": "AtomAx mode Dark Colorblind",
 				"uiTheme": "vs-dark",
-				"path": "./themes/dark_colorblind.json"
+				"path": "./themes/my-dark_colorblind.json"
 			},
 			{
 				"label": "AtomAx mode Dark Tritanopia",
 				"uiTheme": "hc-black",
-				"path": "./themes/dark_tritanopia.json"
+				"path": "./themes/my-dark_tritanopia.json"
 			},
 			{
 				"label": "AtomAx mode System Themes",
 				"uiTheme": "hc-black",
-				"path": "./themes/dark_tritanopia.json"
+				"path": "./themes/my-s-dark_tritanopia.json"
 			}
 		]
 	},
