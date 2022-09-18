@@ -24,7 +24,7 @@ const   S = getTheme({theme: "s", name: "AtomAx mode System Themes"});
           fs.writeFile("./themes/my-dark_dimmed.json", JSON.stringify(dD, null, 2)),
           fs.writeFile("./themes/my-dark_high_contrast.json", JSON.stringify(dHC, null, 2)),
           fs.writeFile("./themes/my-dark_colorblind.json", JSON.stringify(dC, null, 2)),
-          fs.writeFile("./themes/my-dark_tritanopia.json", JSON.stringify(dT, null, 2)),
+          fs.writeFile("./themes/my-dark_tritanopia.json", JSON.wstringify(dT, null, 2)),
           fs.writeFile("./themes/my-s-dark_tritanopia.json", JSON.stringify(S, null, 2)),
         ]))
         .catch(() => process.exit(1))

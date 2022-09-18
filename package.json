@@ -85,9 +85,9 @@
   },
   "devDependencies": {
     "@primer/primitives": "7.9.0",
-    "chroma-js": "^2.1.0",
-    "color": "^3.1.2",
-    "nodemon": "^2.0.3"
+    "chroma-js": "^2.4.2",
+    "color": "^4.2.3",
+    "nodemon": "^2.0.20"
   },
   "scripts": {
     "start": "nodemon --watch src src/index.js",

@@ -8,6 +8,7 @@ function hex(color) {
   return chroma(color).hex();
 }
 
+
 // Choosing colors from primer/primitives
 // There are multiple ways to define what color is used:
 
@@ -24,43 +25,44 @@ function getTheme({ theme, name }) {
   const themes = (options) => options[theme], // Usage : themes({ l : "lightblue", d : "darkblue", dd : "royalblue", hc : "blue" })
         color = getColors(theme), // Usage : color.fg.default
         scale = color.scale, // Usage : scale.blue[6]
-        darkThemeMq = true),
+        // darkThemeMq = window.matchMedia("(prefers-color-scheme : dark)"),
         // _bc_ = "171717",
         // _boc_ = "232323",
         // _fc_ = "fbfbfd",
         // _fuc_ = "f1f1f3",   canvas.default
-        _t_ = darkThemeMq.matches?`${hex(color.canvas.subtle)}${_x_[10]}`:`${hex(color.fg.default)}${_x_[10]}`,
-        _u_ = darkThemeMq.matches?`${hex(color.border.muted)}${_x_[10]}`:`${hex(color.fg.muted)}${_x_[10]}`,
-        _s_ = darkThemeMq.matches?`${hex(color.fg.default)}${_x_[10]}`:`${hex(color.canvas.subtle)}${_x_[10]}`,
+        // _t_ = darkThemeMq.matches?`${hex(color.canvas.subtle)}`:`${hex(color.fg.default)}`,
+        _x_ = ["00", "a1", "33", "4d", "66", "80", "99", "b3", "cd", "e6", ""],
+        _u_ = themes({ l : `${hex(color.canvas.subtle)}`, lHC : `${hex(color.canvas.subtle)}`, lC : `${hex(color.canvas.subtle)}`, lT : `${hex(color.canvas.subtle)}`, d : `${hex(color.fg.default)}`, dd : `${hex(color.fg.default)}`, dhc : `${hex(color.fg.default)}`, dc : `${hex(color.fg.default)}`, dt : `${hex(color.fg.default)}` }),
+        _s_ = themes({ l : `${hex(color.canvas.subtle)}`, lHC : `${hex(color.canvas.subtle)}`, lC : `${hex(color.canvas.subtle)}`, lT : `${hex(color.canvas.subtle)}`, d : `${hex(color.fg.default)}`, dd : `${hex(color.fg.default)}`, dhc : `${hex(color.fg.default)}`, dc : `${hex(color.fg.default)}`, dt : `${hex(color.fg.default)}`}),
         // _z_ = darkThemeMq.matches?'f1f1f3':'232323',
-        _bc_ =  themes({ l : `${hex(color.canvas.subtle)}${_x_[10]}`, lHC : `${hex(color.canvas.subtle)}${_x_[10]}`, lC : `${hex(color.canvas.subtle)}${_x_[10]}`, lT : `${hex(color.canvas.subtle)}${_x_[10]}`, d : `${hex(color.fg.default)}${_x_[10]}`, dd : `${hex(color.fg.default)}${_x_[10]}`, dhc : `${hex(color.fg.default)}${_x_[10]}`, dc : `${hex(color.fg.default)}${_x_[10]}`, dt : `${hex(color.fg.default)}${_x_[10]}`, S : `#${_s_}` }),
+        _bc_ =  themes({ l : `${hex(color.canvas.subtle)}`, lHC : `${hex(color.canvas.subtle)}`, lC : `${hex(color.canvas.subtle)}`, lT : `${hex(color.canvas.subtle)}`, d : `${hex(color.fg.default)}`, dd : `${hex(color.fg.default)}`, dhc : `${hex(color.fg.default)}`, dc : `${hex(color.fg.default)}`, dt : `${hex(color.fg.default)}`}),
 
-        _boc_ = themes({ l : `${hex(color.fg.muted)}${_x_[10]}`, lHC : `${hex(color.fg.muted)}${_x_[10]}`, lC : `${hex(color.fg.muted)}${_x_[10]}`, lT : `${hex(color.fg.muted)}${_x_[10]}`, d : `${hex(color.fg.default)}${_x_[10]}`, dd : `${hex(color.fg.default)}${_x_[10]}`, dhc : `${hex(color.fg.default)}${_x_[10]}`, dc : `${hex(color.fg.default)}${_x_[10]}`, dt : `${hex(color.fg.default)}${_x_[10]}`, S : `#${_s_}` }),
-        _fc_ = themes({ l : `${hex(color.canvas.inset)}${_x_[10]}`, lHC : `${hex(color.canvas.inset)}${_x_[10]}`, lC : `${hex(color.canvas.inset)}${_x_[10]}`, lT : `${hex(color.canvas.inset)}${_x_[10]}`, d : `${hex(color.fg.default)}${_x_[10]}`, dd : `${hex(color.fg.default)}${_x_[10]}`, dhc : `${hex(color.fg.default)}${_x_[10]}`, dc : `${hex(color.fg.default)}${_x_[10]}`, dt : `${hex(color.fg.default)}${_x_[10]}`, S : `#${_s_}` }),
-        _fuc_  = themes({ l : `${hex(color.canvas.subtle)}${_x_[10]}`, lHC : `${hex(color.canvas.subtle)}${_x_[10]}`, lC : `${hex(color.canvas.subtle)}${_x_[10]}`, lT : `${hex(color.canvas.subtle)}${_x_[10]}`, d : `${hex(color.fg.muted)}${_x_[10]}`, dd : `${hex(color.fg.muted)}${_x_[10]}`, dhc : `${hex(color.fg.muted)}${_x_[10]}`, dc : `${hex(color.fg.muted)}${_x_[10]}`, dt : `${hex(color.fg.muted)}${_x_[10]}`, S : `#${_s_}` }),
+        _boc_ = themes({ l : `${hex(color.fg.muted)}`, lHC : `${hex(color.fg.muted)}`, lC : `${hex(color.fg.muted)}`, lT : `${hex(color.fg.muted)}`, d : `${hex(color.fg.default)}`, dd : `${hex(color.fg.default)}`, dhc : `${hex(color.fg.default)}`, dc : `${hex(color.fg.default)}`, dt : `${hex(color.fg.default)}` }),
+        _fc_ = themes({ l : `${hex(color.canvas.inset)}`, lHC : `${hex(color.canvas.inset)}`, lC : `${hex(color.canvas.inset)}`, lT : `${hex(color.canvas.inset)}`, d : `${hex(color.fg.default)}`, dd : `${hex(color.fg.default)}`, dhc : `${hex(color.fg.default)}`, dc : `${hex(color.fg.default)}`, dt : `${hex(color.fg.default)}`}),
+        _fuc_  = themes({ l : `${hex(color.canvas.subtle)}`, lHC : `${hex(color.canvas.subtle)}`, lC : `${hex(color.canvas.subtle)}`, lT : `${hex(color.canvas.subtle)}`, d : `${hex(color.fg.muted)}`, dd : `${hex(color.fg.muted)}`, dhc : `${hex(color.fg.muted)}`, dc : `${hex(color.fg.muted)}`, dt : `${hex(color.fg.muted)}`}),
 
         // _fuc_ = "f1f1f3",
         // _t_ = darkThemeMq.matches?'171717':'fbfbfd',
         // _u_ = darkThemeMq.matches?'232323':'f1f1f3',
         // _s_ = darkThemeMq.matches?'fbfbfd':'171717',
-        _z_ = darkThemeMq.matches?'f1f1f3':'232323',
-        _x_ = ["00", "a1", "33", "4d", "66", "80", "99", "b3", "cd", "e6", ""],
-        _a_ =  themes({ l : `#${_bc_}`, lHC : `#${_bc_}`, lC : `#${_bc_}`, lT : `#${_bc_}`, d : `#${_fc_}`, dd : `#${_fc_}`, dhc : `#${_fc_}`, dc : `#${_fc_}`, dt : `#${_fc_}`, S : `#${_s_}` }),
-        _b_ =  themes({ l : `#${_fc_}`, lHC : `#${_fc_}`, lC : `#${_fc_}`, lT : `#${_fc_}`, d : `#${_bc_}`, dd : `#${_bc_}`, dhc : `#${_bc_}`, dc : `#${_bc_}`, dt : `#${_bc_}`, S : `#${_s_}` }),
-        _c_ =  themes({ l : `#${_fuc_}`, lHC : `#${_fuc_}`, lC : `#${_fuc_}`, lT : `#${_fuc_}`, d : `#${_boc_}`, dd : `#${_boc_}`, dhc : `#${_boc_}`, dc : `#${_boc_}`, dt : `#${_boc_}`, S : `#${_u_}` }),
-        _d_ =  themes({ l : `#${_bc_}`, lHC : `#${_bc_}`, lC : `#${_bc_}`, lT : `#${_bc_}`, d : `#${_bc_}`, dd : `#${_bc_}`, dhc : `#${_bc_}`, dc : `#${_bc_}`, dt : `#${_bc_}`, S : `#${_s_}` }),
-        _e_=  themes({ l : `#${_fuc_}${_x_[7]}`, lHC : `#${_fuc_}${_x_[7]}`, lC : `#${_fuc_}${_x_[7]}`, lT : `#${_fuc_}${_x_[7]}`, d : `#${_fuc_}${_x_[7]}`, dd : `#${_fuc_}${_x_[7]}`, dhc : `#${_fuc_}${_x_[7]}`, dc : `#${_fuc_}${_x_[7]}`, dt : `#${_fuc_}${_x_[7]}`, S : `#${_u_}${_x_[7]}` }),
-        _f_ =  themes({ l : `#${_bc_}${_x_[7]}`, lHC : `#${_bc_}${_x_[7]}`, lC : `#${_bc_}${_x_[7]}`, lT : `#${_bc_}${_x_[7]}`, d : `#${_fc_}${_x_[7]}`, dd : `#${_fc_}${_x_[7]}`, dhc : `#${_fc_}${_x_[7]}`, dc : `#${_fc_}${_x_[7]}`, dt : `#${_fc_}${_x_[7]}`, S : `#${_s_}${_x_[7]}` }),
-        _g_=  themes({ l : `#${_bc_}${_x_[3]}`, lHC : `#${_bc_}${_x_[3]}`, lC : `#${_bc_}${_x_[3]}`, lT : `#${_bc_}${_x_[3]}`, d : `#${_fc_}${_x_[3]}`, dd : `#${_fc_}${_x_[3]}`, dhc : `#${_fc_}${_x_[3]}`, dc : `#${_fc_}${_x_[3]}`, dt : `#${_fc_}${_x_[3]}`, S : `#${_s_}${_x_[3]}` }),
-        _h_ =  themes({ l : `#${_bc_}${_x_[8]}`, lHC : `#${_bc_}${_x_[8]}`, lC : `#${_bc_}${_x_[8]}`, lT : `#${_bc_}${_x_[8]}`, d : `#${_fc_}${_x_[8]}`, dd : `#${_fc_}${_x_[8]}`, dhc : `#${_fc_}${_x_[8]}`, dc : `#${_fc_}${_x_[8]}`, dt : `#${_fc_}${_x_[8]}`, S : `#${_s_}${_x_[8]}` }),
-        _i_ = themes({ l :  `#${_fuc_}${_x_[0]}`, lHC : `#${_fuc_}${_x_[0]}`, lC : `#${_fuc_}${_x_[0]}`, lT : `#${_fuc_}${_x_[0]}`, d : `#${_boc_}${_x_[0]}`, dd : `#${_boc_}${_x_[0]}`, dhc : `#${_boc_}${_x_[0]}`, dc : `#${_boc_}${_x_[0]}`, dt : `#${_boc_}${_x_[0]}`, S : `#${_u_}${_x_[0]}` }),
-        _j_ =  themes({ l : `#${_bc_}${_x_[6]}`, lHC : `#${_bc_}${_x_[6]}`, lC : `#${_bc_}${_x_[6]}`, lT : `#${_bc_}${_x_[6]}`, d : `#${_fc_}${_x_[6]}`, dd : `#${_fc_}${_x_[6]}`, dhc : `#${_fc_}${_x_[6]}`, dc : `#${_fc_}${_x_[6]}`, dt : `#${_fc_}${_x_[6]}`, S : `#${_s_}${_x_[6]}` }),
-        _k_ =  themes({ l : `#${_bc_}${_x_[4]}`, lHC : `#${_bc_}${_x_[4]}`, lC : `#${_bc_}${_x_[4]}`, lT : `#${_bc_}${_x_[4]}`, d : `#${_fc_}${_x_[4]}`, dd : `#${_fc_}${_x_[4]}`, dhc : `#${_fc_}${_x_[4]}`, dc : `#${_fc_}${_x_[4]}`, dt : `#${_fc_}${_x_[4]}`, S : `#${_s_}${_x_[4]}` }),
-        _l_  =  themes({ l : `#${_bc_}${_x_[5]}`, lHC : `#${_bc_}${_x_[5]}`, lC : `#${_bc_}${_x_[5]}`, lT : `#${_bc_}${_x_[5]}`, d : `#${_fc_}${_x_[5]}`, dd : `#${_fc_}${_x_[5]}`, dhc : `#${_fc_}${_x_[5]}`, dc : `#${_fc_}${_x_[5]}`, dt : `#${_fc_}${_x_[5]}`, S : `#${_s_}${_x_[5]}` }),
-        _m_   =  themes({ l : `#${_fuc_}${_x_[5]}`, lHC : `#${_fuc_}${_x_[5]}`, lC : `#${_fuc_}${_x_[5]}`, lT : `#${_fuc_}${_x_[5]}`, d : `#${_boc_}${_x_[5]}`, dd : `#${_boc_}${_x_[5]}`, dhc : `#${_boc_}${_x_[5]}`, dc : `#${_boc_}${_x_[5]}`, dt : `#${_boc_}${_x_[5]}`, S : `#${_u_}${_x_[5]}` }),
-        _n_  = themes({ l : `#${_bc_}${_x_[5]}`, lHC : `#${_bc_}${_x_[5]}`, lC : `#${_bc_}${_x_[5]}`, lT : `#${_bc_}${_x_[5]}`, d : `#${_fc_}${_x_[5]}`, dd : `#${_fc_}${_x_[5]}`, dhc : `#${_fc_}${_x_[5]}`, dc : `#${_fc_}${_x_[5]}`, dt : `#${_fc_}${_x_[5]}`, S : `#${_s_}${_x_[5]}` }),
-        _o_ = themes({ l : `#${_bc_}${_x_[7]}`, lHC : `#${_bc_}${_x_[7]}`, lC : `#${_bc_}${_x_[7]}`, lT : `#${_bc_}${_x_[7]}`, d : `#${_fc_}${_x_[7]}`, dd : `#${_fc_}${_x_[7]}`, dhc : `#${_fc_}${_x_[7]}`, dc : `#${_fc_}${_x_[7]}`, dt : `#${_fc_}${_x_[7]}`, S : `#${_s_}${_x_[7]}` }),
-        _p_ = themes({ l : `#${_fc_}${_x_[7]}`, lHC : `#${_fc_}${_x_[7]}`, lC : `#${_fc_}${_x_[7]}`, lT : `#${_fc_}${_x_[7]}`, d : `#${_bc_}${_x_[7]}`, dd : `#${_bc_}${_x_[7]}`, dhc : `#${_bc_}${_x_[7]}`, dc : `#${_bc_}${_x_[7]}`, dt : `#${_bc_}${_x_[7]}`, S : `#${_s_}${_x_[7]}` })
+        // _z_ = darkThemeMq.matches?'f1f1f3':'232323',
+      
+        _a_ =  themes({ l : `${_bc_}`, lHC : `${_bc_}`, lC : `${_bc_}`, lT : `${_bc_}`, d : `${_fc_}`, dd : `${_fc_}`, dhc : `${_fc_}`, dc : `${_fc_}`, dt : `${_fc_}`}),
+        _b_ =  themes({ l : `${_fc_}`, lHC : `${_fc_}`, lC : `${_fc_}`, lT : `${_fc_}`, d : `${_bc_}`, dd : `${_bc_}`, dhc : `${_bc_}`, dc : `${_bc_}`, dt : `${_bc_}`}),
+        _c_ =  themes({ l : `${_fuc_}`, lHC : `${_fuc_}`, lC : `${_fuc_}`, lT : `${_fuc_}`, d : `${_boc_}`, dd : `${_boc_}`, dhc : `${_boc_}`, dc : `${_boc_}`, dt : `${_boc_}`}),
+        _d_ =  themes({ l : `${_bc_}`, lHC : `${_bc_}`, lC : `${_bc_}`, lT : `${_bc_}`, d : `${_bc_}`, dd : `${_bc_}`, dhc : `${_bc_}`, dc : `${_bc_}`, dt : `${_bc_}`}),
+        _e_=  themes({ l : `${_fuc_}${_x_[7]}`, lHC : `${_fuc_}${_x_[7]}`, lC : `${_fuc_}${_x_[7]}`, lT : `${_fuc_}${_x_[7]}`, d : `${_fuc_}${_x_[7]}`, dd : `${_fuc_}${_x_[7]}`, dhc : `${_fuc_}${_x_[7]}`, dc : `${_fuc_}${_x_[7]}`, dt : `${_fuc_}${_x_[7]}` }),
+        _f_ =  themes({ l : `${_bc_}${_x_[7]}`, lHC : `${_bc_}${_x_[7]}`, lC : `${_bc_}${_x_[7]}`, lT : `${_bc_}${_x_[7]}`, d : `${_fc_}${_x_[7]}`, dd : `${_fc_}${_x_[7]}`, dhc : `${_fc_}${_x_[7]}`, dc : `${_fc_}${_x_[7]}`, dt : `${_fc_}${_x_[7]}` }),
+        _g_=  themes({ l : `${_bc_}${_x_[3]}`, lHC : `${_bc_}${_x_[3]}`, lC : `${_bc_}${_x_[3]}`, lT : `${_bc_}${_x_[3]}`, d : `${_fc_}${_x_[3]}`, dd : `${_fc_}${_x_[3]}`, dhc : `${_fc_}${_x_[3]}`, dc : `${_fc_}${_x_[3]}`, dt : `${_fc_}${_x_[3]}`}),
+        _h_ =  themes({ l : `${_bc_}${_x_[8]}`, lHC : `${_bc_}${_x_[8]}`, lC : `${_bc_}${_x_[8]}`, lT : `${_bc_}${_x_[8]}`, d : `${_fc_}${_x_[8]}`, dd : `${_fc_}${_x_[8]}`, dhc : `${_fc_}${_x_[8]}`, dc : `${_fc_}${_x_[8]}`, dt : `${_fc_}${_x_[8]}`}),
+        _i_ = themes({ l :  `${_fuc_}${_x_[0]}`, lHC : `${_fuc_}${_x_[0]}`, lC : `${_fuc_}${_x_[0]}`, lT : `${_fuc_}${_x_[0]}`, d : `${_boc_}${_x_[0]}`, dd : `${_boc_}${_x_[0]}`, dhc : `${_boc_}${_x_[0]}`, dc : `${_boc_}${_x_[0]}`, dt : `${_boc_}${_x_[0]}` }),
+        _j_ =  themes({ l : `${_bc_}${_x_[6]}`, lHC : `${_bc_}${_x_[6]}`, lC : `${_bc_}${_x_[6]}`, lT : `${_bc_}${_x_[6]}`, d : `${_fc_}${_x_[6]}`, dd : `${_fc_}${_x_[6]}`, dhc : `${_fc_}${_x_[6]}`, dc : `${_fc_}${_x_[6]}`, dt : `${_fc_}${_x_[6]}`}),
+        _k_ =  themes({ l : `${_bc_}${_x_[4]}`, lHC : `${_bc_}${_x_[4]}`, lC : `${_bc_}${_x_[4]}`, lT : `${_bc_}${_x_[4]}`, d : `${_fc_}${_x_[4]}`, dd : `${_fc_}${_x_[4]}`, dhc : `${_fc_}${_x_[4]}`, dc : `${_fc_}${_x_[4]}`, dt : `${_fc_}${_x_[4]}`}),
+        _l_  =  themes({ l : `${_bc_}${_x_[5]}`, lHC : `${_bc_}${_x_[5]}`, lC : `${_bc_}${_x_[5]}`, lT : `${_bc_}${_x_[5]}`, d : `${_fc_}${_x_[5]}`, dd : `${_fc_}${_x_[5]}`, dhc : `${_fc_}${_x_[5]}`, dc : `${_fc_}${_x_[5]}`, dt : `${_fc_}${_x_[5]}`}),
+        _m_   =  themes({ l : `${_fuc_}${_x_[5]}`, lHC : `${_fuc_}${_x_[5]}`, lC : `${_fuc_}${_x_[5]}`, lT : `${_fuc_}${_x_[5]}`, d : `${_boc_}${_x_[5]}`, dd : `${_boc_}${_x_[5]}`, dhc : `${_boc_}${_x_[5]}`, dc : `${_boc_}${_x_[5]}`, dt : `${_boc_}${_x_[5]}`}),
+        _n_  = themes({ l : `${_bc_}${_x_[5]}`, lHC : `${_bc_}${_x_[5]}`, lC : `${_bc_}${_x_[5]}`, lT : `${_bc_}${_x_[5]}`, d : `${_fc_}${_x_[5]}`, dd : `${_fc_}${_x_[5]}`, dhc : `${_fc_}${_x_[5]}`, dc : `${_fc_}${_x_[5]}`, dt : `${_fc_}${_x_[5]}` }),
+        _o_ = themes({ l : `${_bc_}${_x_[7]}`, lHC : `${_bc_}${_x_[7]}`, lC : `${_bc_}${_x_[7]}`, lT : `${_bc_}${_x_[7]}`, d : `${_fc_}${_x_[7]}`, dd : `${_fc_}${_x_[7]}`, dhc : `${_fc_}${_x_[7]}`, dc : `${_fc_}${_x_[7]}`, dt : `${_fc_}${_x_[7]}` }),
+        _p_ = themes({ l : `${_fc_}${_x_[7]}`, lHC : `${_fc_}${_x_[7]}`, lC : `${_fc_}${_x_[7]}`, lT : `${_fc_}${_x_[7]}`, d : `${_bc_}${_x_[7]}`, dd : `${_bc_}${_x_[7]}`, dhc : `${_bc_}${_x_[7]}`, dc : `${_bc_}${_x_[7]}`, dt : `${_bc_}${_x_[7]}` })
   return {
     name : name,
     colors : {
@@ -201,10 +203,10 @@ function getTheme({ theme, name }) {
       "editor.wordHighlightStrongBorder" : _e_,
       "editorBracketHighlight.foreground1" : `${hex(color.sponsors.muted)}`,
       "editorBracketHighlight.foreground2" : `${hex(color.scale.blue[0])}`,
-      "editorBracketHighlight.foreground3" : `${hex(color.sponsors.muted)}${_x_[10]}`,
-      "editorBracketHighlight.foreground4" : `${hex(color.scale.blue[0])}${_x_[10]}`,
-      "editorBracketHighlight.foreground5" : `${hex(color.scale.yellow[0])}${_x_[10]}`,
-      "editorBracketHighlight.foreground6":`#${hex(color.success.muted)}${_x_[10]}`,
+      "editorBracketHighlight.foreground3" : `${hex(color.sponsors.muted)}`,
+      "editorBracketHighlight.foreground4" : `${hex(color.scale.blue[0])}`,
+      "editorBracketHighlight.foreground5" : `${hex(color.scale.yellow[0])}`,
+      "editorBracketHighlight.foreground6":`${hex(color.success.muted)}`,
       "editorBracketHighlight.unexpectedBracket.foreground" : `${hex(color.sponsors.muted)}`,
       "editorBracketMatch.background" : _c_,
       "editorBracketMatch.border" : _c_,
@@ -234,7 +236,7 @@ function getTheme({ theme, name }) {
       "editorError.foreground" : `${hex(color.danger.muted)}${_x_[7]}`,
       "editorGhostText.background" : `${hex(color.success.muted)}`,
       "editorGhostText.border" : `${hex(color.success.muted)}${_x_[5]}`,
-      "editorGhostText.foreground" : `${hex(color.scale.blue[0])}${_x_[10]}`,
+      "editorGhostText.foreground" : `${hex(color.scale.blue[0])}`,
       "editorGroup.border" :  _c_,
       "editorGroup.dropBackground" : `${hex(color.success.muted)}${_x_[8]}`,
       "editorGroup.dropIntoPromptBackground" : _b_,
@@ -246,7 +248,7 @@ function getTheme({ theme, name }) {
       "editorGroupHeader.noTabsBackground" : _b_,
       "editorGroupHeader.tabsBackground" : _b_,
       "editorGroupHeader.tabsBorder" :  _c_,
-      "editorGutter.addedBackground" : `${hex(color.scale.blue[0])}${_x_[10]}`,
+      "editorGutter.addedBackground" : `${hex(color.scale.blue[0])}`,
       "editorGutter.background" : _b_,
       "editorGutter.commentRangeForeground" : _a_,
       "editorGutter.deletedBackground" : `${hex(color.danger.muted)}`,
@@ -263,26 +265,26 @@ function getTheme({ theme, name }) {
       "editorIndentGuide.background" : _i_,
       "editorInfo.background" : _b_,
       "editorInfo.border" :  `${hex(color.scale.blue[0])}${_x_[5]}`,
-      "editorInfo.foreground" : `${hex(color.scale.blue[0])}${_x_[10]}`,
+      "editorInfo.foreground" : `${hex(color.scale.blue[0])}`,
       "editorInlayHint.background" :  _c_,
       "editorInlayHint.foreground" : _a_,
       "editorInlayHint.parameterBackground" :  _c_,
-      "editorInlayHint.parameterForeground" : `${hex(color.scale.blue[0])}${_x_[10]}`,
+      "editorInlayHint.parameterForeground" : `${hex(color.scale.blue[0])}`,
       "editorInlayHint.typeBackground" :  _c_,
-      "editorInlayHint.typeForeground" : `${hex(color.scale.blue[0])}${_x_[10]}`,
-      "editorLightBulb.foreground" : `${hex(color.scale.yellow[0])}${_x_[10]}`,
+      "editorInlayHint.typeForeground" : `${hex(color.scale.blue[0])}`,
+      "editorLightBulb.foreground" : `${hex(color.scale.yellow[0])}`,
       "editorLightBulbAutoFix.foreground" : `${hex(color.success.muted)}${_x_[5]}`,
       "editorLineNumber.activeForeground" : `${hex(color.success.muted)}`,
       "editorLineNumber.foreground" : _f_,
-      "editorLink.activeForeground" :  `${hex(color.scale.blue[0])}${_x_[10]}`,
+      "editorLink.activeForeground" :  `${hex(color.scale.blue[0])}`,
       "editorMarkerNavigation.background" : _b_,
       "editorMarkerNavigationError.background" : `${hex(color.danger.muted)}${_x_[5]}`,
-      "editorMarkerNavigationError.headerBackground" : `${hex(color.danger.muted)}${_x_[10]}`,
-      "editorMarkerNavigationInfo.background" : `${hex(color.scale.blue[0])}${_x_[10]}`,
+      "editorMarkerNavigationError.headerBackground" : `${hex(color.danger.muted)}`,
+      "editorMarkerNavigationInfo.background" : `${hex(color.scale.blue[0])}`,
       "editorMarkerNavigationInfo.headerBackground" : _b_,
       "editorMarkerNavigationWarning.background" : `${hex(color.severe.muted)}${_x_[5]}`,
       "editorMarkerNavigationWarning.headerBackground" : `${hex(color.severe.muted)}${_x_[5]}`,
-      "editorOverviewRuler.addedForeground" : `${hex(color.scale.blue[0])}${_x_[10]}`,
+      "editorOverviewRuler.addedForeground" : `${hex(color.scale.blue[0])}`,
       "editorOverviewRuler.background" :  _c_,
       "editorOverviewRuler.border" : `${hex(color.success.muted)}`,
       "editorOverviewRuler.bracketMatchForeground" : `${hex(color.done.muted )}${_x_[5]}`,
@@ -311,7 +313,7 @@ function getTheme({ theme, name }) {
       "editorSuggestWidget.selectedBackground" :  _c_,
       "editorSuggestWidget.selectedForeground" : _a_,
       "editorSuggestWidget.selectedIconForeground" : _a_,
-      "editorSuggestWidgetStatus.foreground" : `${hex(color.scale.blue[0])}${_x_[10]}`,
+      "editorSuggestWidgetStatus.foreground" : `${hex(color.scale.blue[0])}`,
       "editorUnicodeHighlight.background" : `${hex(color.success.muted)}${_x_[5]}`,
       "editorUnicodeHighlight.border" : `${hex(color.success.muted)}${_x_[5]}`,
       "editorUnnecessaryCode.border" :  _c_,
@@ -319,7 +321,7 @@ function getTheme({ theme, name }) {
       "editorWarning.background" : `${hex(color.severe.muted)}${_x_[0]}`, 
       "editorWarning.border" : `${hex(color.severe.muted)}${_x_[8]}`,
       "editorWarning.foreground" : `${hex(color.danger.muted)}`,
-      "editorWhitespace.foreground" : `${hex(color.sponsors.muted)}${_x_[10]}`,
+      "editorWhitespace.foreground" : `${hex(color.sponsors.muted)}`,
       "editorWidget.background" : _b_,
       "editorWidget.border" :  _c_,
       "editorWidget.foreground" : _d_,
@@ -335,22 +337,22 @@ function getTheme({ theme, name }) {
       "extensionButton.prominentForeground" : _a_,
       "extensionButton.prominentHoverBackground" : `${hex(color.success.muted)}${_x_[6]}`,
   
-      "extensionIcon.preReleaseForeground" : `${hex(color.severe.muted)}${_x_[10]}`,
-      "extensionIcon.sponsorForeground" : `${hex(color.done.muted )}${_x_[10]}`,
-      "extensionIcon.starForeground" : `${hex(color.scale.yellow[0])}${_x_[10]}`,
-      "extensionIcon.verifiedForeground" : `${hex(color.scale.blue[0])}${_x_[10]}`,
+      "extensionIcon.preReleaseForeground" : `${hex(color.severe.muted)}`,
+      "extensionIcon.sponsorForeground" : `${hex(color.done.muted )}`,
+      "extensionIcon.starForeground" : `${hex(color.scale.yellow[0])}`,
+      "extensionIcon.verifiedForeground" : `${hex(color.scale.blue[0])}`,
   
       "focusBorder" :  _c_,
       "foreground" : _d_,
   
       "gitDecoration.addedResourceForeground" : `${hex(color.success.muted)}`,
-      "gitDecoration.conflictingResourceForeground" : `${hex(color.severe.muted)}${_x_[10]}`,
+      "gitDecoration.conflictingResourceForeground" : `${hex(color.severe.muted)}`,
       "gitDecoration.deletedResourceForeground" : `${hex(color.danger.muted)}`,
       "gitDecoration.ignoredResourceForeground" : `${hex(color.severe.muted)}${_x_[5]}`,
-      "gitDecoration.modifiedResourceForeground" : `${hex(color.scale.blue[0])}${_x_[10]}`,
+      "gitDecoration.modifiedResourceForeground" : `${hex(color.scale.blue[0])}`,
       "gitDecoration.renamedResourceForeground" : _a_,
       "gitDecoration.stageDeletedResourceForeground" : `${hex(color.scale.blue[0])}${_x_[5]}`,
-      "gitDecoration.stageModifiedResourceForeground" : `${hex(color.success.muted)}${_x_[10]}`,
+      "gitDecoration.stageModifiedResourceForeground" : `${hex(color.success.muted)}`,
       "gitDecoration.submoduleResourceForeground" :  _c_,
       "gitDecoration.untrackedResourceForeground" : _d_,
   
@@ -384,7 +386,7 @@ function getTheme({ theme, name }) {
       "list.activeSelectionBackground" :  _c_,
       "list.activeSelectionForeground" : _a_,
       "list.activeSelectionIconForeground" : `${hex(color.success.muted)}`,
-      "list.deemphasizedForeground" : `${hex(color.scale.yellow[0])}${_x_[10]}`,
+      "list.deemphasizedForeground" : `${hex(color.scale.yellow[0])}`,
       "list.dropBackground" : `${hex(color.success.muted)}${_x_[5]}`,
       "list.errorForeground" : `${hex(color.danger.muted)}${_x_[4]}`,
       "list.filterMatchBackground" : `${hex(color.success.muted)}${_x_[9]}`,
@@ -403,8 +405,8 @@ function getTheme({ theme, name }) {
       "list.inactiveSelectionForeground" : _a_,
       "list.inactiveSelectionIconForeground" : `${hex(color.success.muted)}`,
       "list.invalidItemForeground" : `${hex(color.danger.muted)}${_x_[4]}`,
-      "list.warningForeground" : `${hex(color.severe.muted)}${_x_[10]}`,
-      "listFilterWidget.background" : `${hex(color.scale.blue[0])}${_x_[10]}`,
+      "list.warningForeground" : `${hex(color.severe.muted)}`,
+      "listFilterWidget.background" : `${hex(color.scale.blue[0])}`,
       "listFilterWidget.noMatchesOutline" : _l_,
       "listFilterWidget.outline" : `${hex(color.scale.blue[0])}${_x_[5]}`,
       "listFilterWidget.shadow" :  _c_,
@@ -418,7 +420,7 @@ function getTheme({ theme, name }) {
       "menu.separatorBackground" :  _c_,
       
       "menubar.selectionBackground" : `${hex(color.success.muted)}${_x_[5]}`,
-      "menubar.selectionBorder" : `${hex(color.success.muted)}${_x_[10]}`,
+      "menubar.selectionBorder" : `${hex(color.success.muted)}`,
       "menubar.selectionForeground" : _a_,
   
       "merge.border" :  _c_,
@@ -433,7 +435,7 @@ function getTheme({ theme, name }) {
       "mergeEditor.conflict.handled.minimapOverViewRuler" : `${hex(color.success.muted)}${_x_[5]}`,
       "mergeEditor.conflict.handledFocused.border" :  _c_,
       "mergeEditor.conflict.handledUnfocused.border" : `${hex(color.success.muted)}${_x_[5]}`,
-      "mergeEditor.conflict.unhandled.minimapOverViewRuler" : `${hex(color.scale.blue[0])}${_x_[10]}`,
+      "mergeEditor.conflict.unhandled.minimapOverViewRuler" : `${hex(color.scale.blue[0])}`,
       "mergeEditor.conflict.unhandledFocused.border" : `${hex(color.scale.yellow[0])}${_x_[5]}`,
       "mergeEditor.conflict.unhandledUnfocused.border" :  _c_,
       "mergeEditor.conflictingLines.background" : `${hex(color.danger.muted)}${_x_[3]}`,
@@ -447,7 +449,7 @@ function getTheme({ theme, name }) {
       "minimap.warningHighlight" : `${hex(color.danger.muted)}`,
       "minimapGutter.addedBackground" : `${hex(color.scale.blue[0])}${_x_[7]}`,
       "minimapGutter.deletedBackground" : `${hex(color.danger.muted)}`,
-      "minimapGutter.modifiedBackground" : `${hex(color.scale.blue[0])}${_x_[10]}`,
+      "minimapGutter.modifiedBackground" : `${hex(color.scale.blue[0])}`,
       "minimapSlider.activeBackground" : _f_,
       "minimapSlider.background" : `${hex(color.success.muted)}${_x_[7]}`,
       "minimapSlider.hoverBackground" : `${hex(color.success.muted)}${_x_[5]}`,
@@ -456,7 +458,7 @@ function getTheme({ theme, name }) {
       "notificationCenterHeader.background" : _b_,
       "notificationCenterHeader.foreground" : _a_,
   
-      "notificationLink.foreground" : `${hex(color.scale.blue[0])}${_x_[10]}`,
+      "notificationLink.foreground" : `${hex(color.scale.blue[0])}`,
   
       "notificationToast.border" :  _c_,
   
@@ -464,13 +466,13 @@ function getTheme({ theme, name }) {
       "notifications.border" :  _c_,
       "notifications.foreground" : _d_,
       "notificationsErrorIcon.foreground" : `${hex(color.danger.muted)}${_x_[5]}`,
-      "notificationsInfoIcon.foreground" : `${hex(color.scale.blue[0])}${_x_[10]}`,
-      "notificationsWarningIcon.foreground" : `${hex(color.scale.blue[0])}${_x_[10]}`,
+      "notificationsInfoIcon.foreground" : `${hex(color.scale.blue[0])}`,
+      "notificationsWarningIcon.foreground" : `${hex(color.scale.blue[0])}`,
   
       "panel.background" : _b_,
       "panel.border" :  _c_,
       "panel.dropBorder" : _a_,
-      "panelInput.border" : `${hex(color.scale.blue[0])}${_x_[10]}`,
+      "panelInput.border" : `${hex(color.scale.blue[0])}`,
       "panelSection.border" : `${hex(color.danger.muted)}`,
       "panelSection.dropBackground" :  _b_,
       "panelSectionHeader.background" : _b_,
@@ -506,7 +508,7 @@ function getTheme({ theme, name }) {
   
       "problemsWarningIcon.foreground" : `${hex(color.severe.muted)}${_x_[5]}`,
   
-      "progressBar.background" : `${hex(color.success.muted)}${_x_[10]}`,
+      "progressBar.background" : `${hex(color.success.muted)}`,
   
       "quickInput.background" : _b_,
       "quickInput.foreground" : _a_,
@@ -546,7 +548,7 @@ function getTheme({ theme, name }) {
       "statusBar.background" :  _c_,
       "statusBar.border" :  _c_,
       "statusBar.debuggingBackground" : `${hex(color.danger.muted)}${_x_[6]}`,
-      "statusBar.debuggingBorder" : `${hex(color.done.muted )}${_x_[10]}`,
+      "statusBar.debuggingBorder" : `${hex(color.done.muted )}`,
       "statusBar.debuggingForeground" : _a_,
       "statusBar.focusBorder" :  _c_,
       "statusBar.foreground" : _f_,
@@ -568,8 +570,8 @@ function getTheme({ theme, name }) {
       "statusBarItem.warningBackground" : `${hex(color.scale.blue[0])}${_x_[5]}`,
       "statusBarItem.warningForeground" : `${hex(color.scale.blue[0])}${_x_[5]}`,
   
-      "symbolIcon.arrayForeground" : `${hex(color.scale.blue[0])}${_x_[10]}`,
-      "symbolIcon.booleanForeground":`#${hex(color.done.muted)}${_x_[10]}`,
+      "symbolIcon.arrayForeground" : `${hex(color.scale.blue[0])}`,
+      "symbolIcon.booleanForeground":`${hex(color.done.muted)}`,
       "symbolIcon.classForeground" : `${hex(color.success.muted)}`,
       "symbolIcon.colorForeground" : `${hex(color.success.muted)}`,
       "symbolIcon.constantForeground" : "#ffc803",
@@ -668,24 +670,24 @@ function getTheme({ theme, name }) {
       "testing.iconErrored" : `${hex(color.danger.muted)}`,
       "testing.iconFailed" : `${hex(color.danger.muted)}`,
       "testing.iconPassed" : `${hex(color.success.muted)}`,
-      "testing.iconQueued" : `${hex(color.scale.yellow[0])}${_x_[10]}`,
-      "testing.iconSkipped":`#${hex(color.severe.muted)}${_x_[10]}`,
-      "testing.iconUnset" : `${hex(color.severe.muted)}${_x_[10]}`,
+      "testing.iconQueued" : `${hex(color.scale.yellow[0])}`,
+      "testing.iconSkipped":`${hex(color.severe.muted)}`,
+      "testing.iconUnset" : `${hex(color.severe.muted)}`,
       "testing.message.error.decorationForeground" : `${hex(color.danger.muted)}`,
       "testing.message.error.lineBackground" : `${hex(color.danger.muted)}${_x_[5]}`,
       "testing.message.info.decorationForeground" : `${hex(color.scale.blue[0])}${_x_[5]}`,
-      "testing.message.info.lineBackground" : `${hex(color.scale.blue[0])}${_x_[10]}`,
+      "testing.message.info.lineBackground" : `${hex(color.scale.blue[0])}`,
       "testing.peekBorder" : _b_,
       "testing.peekHeaderBackground" : `${hex(color.danger.muted)}`,
-      "testing.runAction" : `${hex(color.scale.blue[0])}${_x_[10]}`,
+      "testing.runAction" : `${hex(color.scale.blue[0])}`,
   
       "textBlockQuote.background" : `${hex(color.success.muted)}`,
       "textBlockQuote.border" :  _o_,
   
       "textCodeBlock.background" : _o_,
   
-      "textLink.activeForeground" : `${hex(color.scale.blue[0])}${_x_[10]}`,
-      "textLink.foreground" : `${hex(color.scale.blue[0])}${_x_[10]}`,
+      "textLink.activeForeground" : `${hex(color.scale.blue[0])}`,
+      "textLink.foreground" : `${hex(color.scale.blue[0])}`,
   
       "textPreformat.foreground" : _a_,
   
@@ -709,7 +711,7 @@ function getTheme({ theme, name }) {
   
       "welcomePage.background" : _b_,
       "welcomePage.progress.background" :  _c_,
-      "welcomePage.progress.foreground" : `${hex(color.success.muted)}${_x_[10]}`,
+      "welcomePage.progress.foreground" : `${hex(color.success.muted)}`,
       "welcomePage.tileBackground" :  _c_,
       "welcomePage.tileHoverBackground" : _b_,
       "welcomePage.tileShadow" :  _c_,
@@ -718,7 +720,7 @@ function getTheme({ theme, name }) {
       "window.activeBorder" : _a_,
       "window.inactiveBorder" : _a_,
       //"debugConsole.errorForeground" : `${hex(color.danger.muted)}`,
-      //"debugConsole.infoForeground" : `${hex(color.scale.blue[0])}${_x_[10]}`,
+      //"debugConsole.infoForeground" : `${hex(color.scale.blue[0])}`,
       //"debugConsole.sourceForeground" : _d_,
       //"debugConsole.warningForeground" : `${hex(color.danger.muted)}`,
       //"debugConsoleInputIcon.foreground" : _d_,
@@ -762,7 +764,7 @@ function getTheme({ theme, name }) {
       //"notebookStatusErrorIcon.foreground" : `${hex(color.danger.muted)}`,
       //"notebookStatusRunningIcon.foreground" : _d_,
       //"notebookStatusSuccessIcon.foreground" : "#89d185",
-      //"pullRequests.notification" : `${hex(color.scale.blue[0])}${_x_[10]}`,
+      //"pullRequests.notification" : `${hex(color.scale.blue[0])}`,
       //"settings.checkboxBackground" :  _c_,
       //"settings.checkboxBorder" : _d_,
       //"settings.checkboxForeground" : _d_,
@@ -802,7 +804,7 @@ function getTheme({ theme, name }) {
           "string.comment"
         ],
         "settings" : {
-          "foreground" : `${hex(color.fg.muted)}${_x_[10]}`
+          "foreground" : `${hex(color.fg.muted)}`
         }
       },
       {
@@ -815,7 +817,7 @@ function getTheme({ theme, name }) {
           "entity"
         ],
         "settings" : {
-          "foreground" : `${hex(color.accent.emphasis)}${_x_[10]}`
+          "foreground" : `${hex(color.accent.emphasis)}`
         }
       },
       {
@@ -825,7 +827,7 @@ function getTheme({ theme, name }) {
           "meta.definition.variable"
         ],
         "settings" : {
-          "foreground" : `${hex(color.severe.emphasis)}${_x_[10]}`
+          "foreground" : `${hex(color.severe.emphasis)}`
         }
       },
       {
@@ -839,13 +841,13 @@ function getTheme({ theme, name }) {
           "meta.embedded.expression"
         ],
         "settings" : {
-          "foreground" : `${hex(color.fg.default)}${_x_[10]}`
+          "foreground" : `${hex(color.fg.default)}`
         }
       },
       {
         "scope" : "entity.name.function",
         "settings" : {
-          "foreground" : `${hex(color.done.f)}${_x_[10]}`
+          "foreground" : `${hex(color.done.fg)}`
         }
       },
       {
@@ -854,13 +856,13 @@ function getTheme({ theme, name }) {
           "support.class.component"
         ],
         "settings" : {
-          "foreground" : `${hex(color.open.fg)}${_x_[10]}`
+          "foreground" : `${hex(color.open.fg)}`
         }
       },
       {
         "scope" : "keyword",
         "settings" : {
-          "foreground" :  `${hex(color.closed.emphasis)}${_x_[10]}`
+          "foreground" :  `${hex(color.closed.emphasis)}`
         }
       },
       {
@@ -869,7 +871,7 @@ function getTheme({ theme, name }) {
           "storage.type"
         ],
         "settings" : {
-          "foreground" : `${hex(color.closed.emphasis)}${_x_[10]}`
+          "foreground" : `${hex(color.closed.emphasis)}`
         }
       },
       {
@@ -879,7 +881,7 @@ function getTheme({ theme, name }) {
           "storage.type.java"
         ],
         "settings" : {
-          "foreground" : `${hex(color.severe.emphasis)}${_x_[10]}`
+          "foreground" : `${hex(color.severe.emphasis)}`
         }
       },
       {
@@ -888,79 +890,79 @@ function getTheme({ theme, name }) {
           "string punctuation.section.embedded source"
         ],
         "settings" : {
-          "foreground" : `${hex(color.accent.fg)}${_x_[10]}`
+          "foreground" : `${hex(color.accent.fg)}`
         }
       },
       {
         "scope" : "support",
         "settings" : {
-          "foreground" : `${hex(color.accent.emphasis)}${_x_[10]}`
+          "foreground" : `${hex(color.accent.emphasis)}`
         }
       },
       {
         "scope" : "meta.property-name",
         "settings" : {
-          "foreground" : `${hex(color.accent.emphasis)}${_x_[10]}`
+          "foreground" : `${hex(color.accent.emphasis)}`
         }
       },
       {
         "scope" : "variable",
         "settings" : {
-          "foreground" : `${hex(color.severe.emphasis)}${_x_[10]}`
+          "foreground" : `${hex(color.severe.emphasis)}`
         }
       },
       {
         "scope" : "variable.other",
         "settings" : {
-          "foreground" : `${hex(color.severe.emphasis)}${_x_[10]}`
+          "foreground" : `${hex(color.severe.emphasis)}`
         }
       },
       {
         "scope" : "invalid.broken",
         "settings" : {
-          "foreground" : `${hex(color.closed.emphasis)}${_x_[10]}`,
+          "foreground" : `${hex(color.closed.emphasis)}`,
           "fontStyle" : "italic"
         }
       },
       {
         "scope" : "invalid.deprecated",
         "settings" : {
-          "foreground" : `${hex(color.closed.emphasis)}${_x_[10]}`,
+          "foreground" : `${hex(color.closed.emphasis)}`,
           "fontStyle" : "italic"
         }
       },
       {
         "scope" : "invalid.illegal",
         "settings" : {
-          "foreground" : `${hex(color.closed.emphasis)}${_x_[10]}`,
+          "foreground" : `${hex(color.closed.emphasis)}`,
           "fontStyle" : "italic"
         }
       },
       {
         "scope" : "invalid.unimplemented",
         "settings" : {
-          "foreground" : `${hex(color.closed.emphasis)}${_x_[10]}`,
+          "foreground" : `${hex(color.closed.emphasis)}`,
           "fontStyle" : "italic"
         }
       },
       {
         "scope" : "carriage-return",
         "settings" : {
-          "foreground" : `${hex(color.closed.fg)}${_x_[10]}`,
-          "background" : `${hex(color.closed.emphasis)}${_x_[10]}`,
+          "foreground" : `${hex(color.closed.fg)}`,
+          "background" : `${hex(color.closed.emphasis)}`,
           "fontStyle" : "italic underline"
         }
       },
       {
         "scope" : "message.error",
         "settings" : {
-          "foreground" : `${hex(color.closed.emphasis)}${_x_[10]}`
+          "foreground" : `${hex(color.closed.emphasis)}`
         }
       },
       {
         "scope" : "string variable",
         "settings" : {
-          "foreground" : `${hex(color.accent.emphasis)}${_x_[10]}`
+          "foreground" : `${hex(color.accent.emphasis)}`
         }
       },
       {
@@ -969,7 +971,7 @@ function getTheme({ theme, name }) {
           "string.regexp"
         ],
         "settings" : {
-          "foreground" : `${hex(color.accent.fg)}${_x_[10]}`
+          "foreground" : `${hex(color.accent.fg)}`
         }
       },
       {
@@ -980,44 +982,44 @@ function getTheme({ theme, name }) {
           "string.regexp string.regexp.arbitrary-repitition"
         ],
         "settings" : {
-          "foreground" : `${hex(color.accent.fg)}${_x_[10]}`
+          "foreground" : `${hex(color.accent.fg)}`
         }
       },
       {
         "scope" : "string.regexp constant.character.escape",
         "settings" : {
-          "foreground" : `${hex(color.open.emphasis)}${_x_[10]}`,
+          "foreground" : `${hex(color.open.emphasis)}`,
           "fontStyle" : "bold"
         }
       },
       {
         "scope" : "support.constant",
         "settings" : {
-          "foreground" : `${hex(color.accent.emphasis)}${_x_[10]}`
+          "foreground" : `${hex(color.accent.emphasis)}`
         }
       },
       {
         "scope" : "support.variable",
         "settings" : {
-          "foreground" : `${hex(color.accent.emphasis)}${_x_[10]}`
+          "foreground" : `${hex(color.accent.emphasis)}`
         }
       },
       {
         "scope" : "support.type.property-name.json",
         "settings" : {
-          "foreground" : `${hex(color.open.emphasis)}${_x_[10]}`
+          "foreground" : `${hex(color.open.emphasis)}`
         }
       },
       {
         "scope" : "meta.module-reference",
         "settings" : {
-          "foreground" : `${hex(color.accent.emphasis)}${_x_[10]}`
+          "foreground" : `${hex(color.accent.emphasis)}`
         }
       },
       {
         "scope" : "punctuation.definition.list.begin.markdown",
         "settings" : {
-          "foreground" : `${hex(color.severe.emphasis)}${_x_[10]}`
+          "foreground" : `${hex(color.severe.emphasis)}`
         }
       },
       {
@@ -1026,27 +1028,27 @@ function getTheme({ theme, name }) {
           "markup.heading entity.name"
         ],
         "settings" : {
-          "foreground" : `${hex(color.accent.emphasis)}${_x_[10]}`,
+          "foreground" : `${hex(color.accent.emphasis)}`,
           "fontStyle" : "bold"
         }
       },
       {
         "scope" : "markup.quote",
         "settings" : {
-          "foreground" : `${hex(color.open.emphasis)}${_x_[10]}`
+          "foreground" : `${hex(color.open.emphasis)}`
         }
       },
       {
         "scope" : "markup.italic",
         "settings" : {
-          "foreground" : `${hex(color.severe.emphasis)}${_x_[10]}`,
+          "foreground" : `${hex(color.severe.emphasis)}`,
           "fontStyle" : "italic"
         }
       },
       {
         "scope" : "markup.bold",
         "settings" : {
-          "foreground" : `${hex(color.severe.emphasis)}${_x_[10]}`,
+          "foreground" : `${hex(color.severe.emphasis)}`,
           "fontStyle" : "bold"
         }
       },
@@ -1069,7 +1071,7 @@ function getTheme({ theme, name }) {
       {
         "scope" : "markup.inline.raw",
         "settings" : {
-          "foreground" : `${hex(color.accent.emphasis)}${_x_[10]}`
+          "foreground" : `${hex(color.accent.emphasis)}`
         }
       },
       {
@@ -1079,8 +1081,8 @@ function getTheme({ theme, name }) {
           "punctuation.definition.deleted"
         ],
         "settings" : {
-          "foreground" : `${hex(color.closed.emphasis)}${_x_[10]}`,
-          "background" : `${hex(color.closed.emphasis)}${_x_[10]}`
+          "foreground" : `${hex(color.closed.emphasis)}`,
+          "background" : `${hex(color.closed.emphasis)}`
         }
       },
       {
@@ -1088,7 +1090,7 @@ function getTheme({ theme, name }) {
           "punctuation.section.embedded"
         ],
         "settings" : {
-          "foreground" : `${hex(color.closed.emphasis)}${_x_[10]}`
+          "foreground" : `${hex(color.closed.emphasis)}`
         }
       },
       {
@@ -1098,8 +1100,8 @@ function getTheme({ theme, name }) {
           "punctuation.definition.inserted"
         ],
         "settings" : {
-          "foreground" : `${hex(color.open.emphasis)}${_x_[10]}`,
-          "background" : `${hex(color.open.fg)}${_x_[10]}`
+          "foreground" : `${hex(color.open.emphasis)}`,
+          "background" : `${hex(color.open.fg)}`
         }
       },
       {
@@ -1108,8 +1110,8 @@ function getTheme({ theme, name }) {
           "punctuation.definition.changed"
         ],
         "settings" : {
-          "foreground" : `${hex(color.severe.emphasis)}${_x_[10]}`,
-          "background" : `${hex(color.severe.fg)}${_x_[10]}`
+          "foreground" : `${hex(color.severe.emphasis)}`,
+          "background" : `${hex(color.severe.fg)}`
         }
       },
       {
@@ -1118,34 +1120,34 @@ function getTheme({ theme, name }) {
           "markup.untracked"
         ],
         "settings" : {
-          "foreground" : `${hex(color.neutral.emphasis)}${_x_[10]}`,
-          "background" : `${hex(color.accent.emphasis)}${_x_[10]}`
+          "foreground" : `${hex(color.neutral.emphasis)}`,
+          "background" : `${hex(color.accent.emphasis)}`
         }
       },
       {
         "scope" : "meta.diff.range",
         "settings" : {
-          "foreground" : `${hex(color.done.fg)}${_x_[10]}`,
+          "foreground" : `${hex(color.done.fg)}`,
           "fontStyle" : "bold"
         }
       },
       {
         "scope" : "meta.diff.header",
         "settings" : {
-          "foreground" : `${hex(color.accent.emphasis)}${_x_[10]}`
+          "foreground" : `${hex(color.accent.emphasis)}`
         }
       },
       {
         "scope" : "meta.separator",
         "settings" : {
-          "foreground" : `${hex(color.accent.emphasis)}${_x_[10]}`,
+          "foreground" : `${hex(color.accent.emphasis)}`,
           "fontStyle" : "bold"
         }
       },
       {
         "scope" : "meta.output",
         "settings" : {
-          "foreground" : `${hex(color.accent.emphasis)}${_x_[10]}`
+          "foreground" : `${hex(color.accent.emphasis)}`
         }
       },
       {
@@ -1158,13 +1160,13 @@ function getTheme({ theme, name }) {
           "brackethighlighter.quote"
         ],
         "settings" : {
-          "foreground" : `${hex(color.neutral.emphasisPlus)}${_x_[10]}`
+          "foreground" : `${hex(color.neutral.emphasisPlus)}`
         }
       },
       {
         "scope" : "brackethighlighter.unmatched",
         "settings" : {
-          "foreground" : `${hex(color.closed.emphasis)}${_x_[10]}`
+          "foreground" : `${hex(color.closed.emphasis)}`
         }
       },
       {
@@ -1173,7 +1175,7 @@ function getTheme({ theme, name }) {
           "string.other.link"
         ],
         "settings" : {
-          "foreground" : `${hex(color.accent.fg)}${_x_[10]}`,
+          "foreground" : `${hex(color.accent.fg)}`,
           "fontStyle" : "underline"
         }
       },
@@ -1183,7 +1185,7 @@ function getTheme({ theme, name }) {
           "constant.numeric"
         ],
         "settings" : {
-          "foreground" : `${hex(color.closed.emphasis)}${_x_[10]}`,
+          "foreground" : `${hex(color.closed.emphasis)}`,
           "fontStyle" : ""
         }
       },
@@ -1192,7 +1194,7 @@ function getTheme({ theme, name }) {
           "support.type.property-name"
         ],
         "settings" : {
-          "foreground" : `${hex(color.done.fg)}${_x_[10]}`,
+          "foreground" : `${hex(color.done.fg)}`,
           "fontStyle" : ""
         }
       },
@@ -1201,7 +1203,7 @@ function getTheme({ theme, name }) {
           "string"
         ],
         "settings" : {
-          "foreground" : `${hex(color.done.fg)}${_x_[10]}`,
+          "foreground" : `${hex(color.done.fg)}`,
           "fontStyle" : ""
         }
       },
@@ -1211,7 +1213,7 @@ function getTheme({ theme, name }) {
           "constant.character.escape"
         ],
         "settings" : {
-          "foreground" : `${hex(color.fg.default)}${_x_[10]}`
+          "foreground" : `${hex(color.fg.default)}`
         }
       },
       {
@@ -1219,7 +1221,7 @@ function getTheme({ theme, name }) {
           "string"
         ],
         "settings" : {
-          "foreground" : `${hex(color.fg.default)}${_x_[10]}`
+          "foreground" : `${hex(color.fg.default)}`
         }
       },
       {
@@ -1227,7 +1229,7 @@ function getTheme({ theme, name }) {
           "keyword"
         ],
         "settings" : {
-          "foreground" : `${hex(color.accent.emphasis)}${_x_[10]}`
+          "foreground" : `${hex(color.accent.emphasis)}`
         }
       },
       {
@@ -1235,7 +1237,7 @@ function getTheme({ theme, name }) {
           "support.type.property-name"
         ],
         "settings" : {
-          "foreground" : `${hex(color.success.fg)}${_x_[10]}`,
+          "foreground" : `${hex(color.success.fg)}`,
           "fontStyle" : ""
         }
       },
@@ -1244,7 +1246,7 @@ function getTheme({ theme, name }) {
           "entity.name.function"
         ],
         "settings" : {
-          "foreground" : `${hex(color.accent.fg)}${_x_[10]}`,
+          "foreground" : `${hex(color.accent.fg)}`,
           "fontStyle" : ""
         }
       },
@@ -1255,7 +1257,7 @@ function getTheme({ theme, name }) {
           "punctuation.definition.parameters.end"
         ],
         "settings" : {
-          "foreground" : `${hex(color.sponsors.fg)}${_x_[10]}`,
+          "foreground" : `${hex(color.sponsors.fg)}`,
           "fontStyle" : ""
         }
       },
@@ -1264,7 +1266,7 @@ function getTheme({ theme, name }) {
           "entity.name.type"
         ],
         "settings" : {
-          "foreground" : `${hex(color.scale.yellow[0])}${_x_[10]}`,
+          "foreground" : `${hex(color.scale.yellow[0])}`,
           "fontStyle" : ""
         }
       },
@@ -1273,7 +1275,7 @@ function getTheme({ theme, name }) {
           "meta.embedded"
         ],
         "settings" : {
-          "foreground" : `${hex(color.sponsors.fg)}${_x_[10]}`
+          "foreground" : `${hex(color.sponsors.fg)}`
         }
       },
       {
@@ -1281,7 +1283,7 @@ function getTheme({ theme, name }) {
           "support.function"
         ],
         "settings" : {
-          "foreground" : `${hex(color.scale.blue[0])}${_x_[10]}`
+          "foreground" : `${hex(color.scale.blue[0])}`
         }
       },
       {
@@ -1289,7 +1291,7 @@ function getTheme({ theme, name }) {
           "storage.type"
         ],
         "settings" : {
-          "foreground" : `${hex(color.accent.fg)}${_x_[10]}`
+          "foreground" : `${hex(color.accent.fg)}`
         }
       },
       {
@@ -1297,7 +1299,7 @@ function getTheme({ theme, name }) {
           "storage.modifier"
         ],
         "settings" : {
-          "foreground" : `${hex(color.scale.pink[6])}${_x_[10]}`
+          "foreground" : `${hex(color.scale.pink[6])}`
         }
       },
       {
@@ -1305,7 +1307,7 @@ function getTheme({ theme, name }) {
           "variable"
         ],
         "settings" : {
-          "foreground" : `${hex(color.success.fg)}${_x_[10]}`
+          "foreground" : `${hex(color.success.fg)}`
         }
       },
       {
@@ -1313,7 +1315,7 @@ function getTheme({ theme, name }) {
           "variable.other.readwrite.js"
         ],
         "settings" : {
-          "foreground" : `${hex(color.sponsors.fg)}${_x_[10]}`
+          "foreground" : `${hex(color.sponsors.fg)}`
         }
       },
       {
@@ -1322,7 +1324,7 @@ function getTheme({ theme, name }) {
           "keyword.control"
         ],
         "settings" : {
-          "foreground" : `${hex(color.done.f)}${_x_[10]}`
+          "foreground" : `${hex(color.done.fg)}`
         }
       },
       {
@@ -1330,7 +1332,7 @@ function getTheme({ theme, name }) {
           "variable.language"
         ],
         "settings" : {
-          "foreground" : `${hex(color.fg.muted)}${_x_[10]}`
+          "foreground" : `${hex(color.fg.muted)}`
         }
       },
       {
@@ -1338,7 +1340,7 @@ function getTheme({ theme, name }) {
           "variable"
         ],
         "settings" : {
-          "foreground" : `${hex(color.accent.emphasis)}${_x_[10]}`
+          "foreground" : `${hex(color.accent.emphasis)}`
         }
       },
       {
@@ -1346,7 +1348,7 @@ function getTheme({ theme, name }) {
           "keyword.operator"
         ],
         "settings" : {
-          "foreground" : `${hex(color.scale.blue[3])}${_x_[10]}`,
+          "foreground" : `${hex(color.scale.blue[3])}`,
           "fontStyle" : ""
         }
       },
@@ -1355,7 +1357,7 @@ function getTheme({ theme, name }) {
           "keyword.operator"
         ],
         "settings" : {
-          "foreground" : `${hex(color.fg.default)}${_x_[10]}`
+          "foreground" : `${hex(color.fg.default)}`
         }
       },
       {
@@ -1363,7 +1365,7 @@ function getTheme({ theme, name }) {
           "support.class"
         ],
         "settings" : {
-          "foreground" : `${hex(color.scale.yellow[0])}${_x_[10]}`,
+          "foreground" : `${hex(color.scale.yellow[0])}`,
           "fontStyle" : ""
         }
       },
@@ -1372,7 +1374,7 @@ function getTheme({ theme, name }) {
           "keyword"
         ],
         "settings" : {
-          "foreground" : `${hex(color.sponsors.fg)}${_x_[10]}`,
+          "foreground" : `${hex(color.sponsors.fg)}`,
           "fontStyle" : ""
         }
       },
@@ -1381,7 +1383,7 @@ function getTheme({ theme, name }) {
           "comment"
         ],
         "settings" : {
-          "foreground" : `${hex(color.neutral.emphasis)}${_x_[10]}`,
+          "foreground" : `${hex(color.neutral.emphasis)}`,
           "fontStyle" : ""
         }
       },
@@ -1390,7 +1392,7 @@ function getTheme({ theme, name }) {
           "punctuation.separator.key-value.html"
         ],
         "settings" : {
-          "foreground" : `${hex(color.sponsors.fg)}${_x_[10]}`,
+          "foreground" : `${hex(color.sponsors.fg)}`,
           "fontStyle" : ""
         }
       },
@@ -1399,7 +1401,7 @@ function getTheme({ theme, name }) {
           "punctuation.definition.tag"
         ],
         "settings" : {
-          "foreground" : `${hex(color.sponsors.fg)}${_x_[10]}`,
+          "foreground" : `${hex(color.sponsors.fg)}`,
           "fontStyle" : ""
         }
       },
@@ -1411,7 +1413,7 @@ function getTheme({ theme, name }) {
           "punctuation.definition.string.begin.js"
         ],
         "settings" : {
-          "foreground" : `${hex(color.sponsors.fg)}${_x_[10]}`,
+          "foreground" : `${hex(color.sponsors.fg)}`,
           "fontStyle" : ""
         }
       },
@@ -1421,7 +1423,7 @@ function getTheme({ theme, name }) {
           "punctuation.support.type.property-name.end.json.comments"
         ],
         "settings" : {
-          "foreground" : `${hex(color.success.fg)}${_x_[10]}`,
+          "foreground" : `${hex(color.success.fg)}`,
           "fontStyle" : ""
         }
       },
@@ -1431,7 +1433,7 @@ function getTheme({ theme, name }) {
           "punctuation.definition.string.end.html"
         ],
         "settings" : {
-          "foreground" : `${hex(color.success.fg)}${_x_[10]}`,
+          "foreground" : `${hex(color.success.fg)}`,
           "fontStyle" : ""
         }
       },
@@ -1440,7 +1442,7 @@ function getTheme({ theme, name }) {
           "source.sql.embedded.php"
         ],
         "settings" : {
-          "foreground" : `${hex(color.sponsors.fg)}${_x_[10]}`,
+          "foreground" : `${hex(color.sponsors.fg)}`,
           "fontStyle" : ""
         }
       },
@@ -1451,7 +1453,7 @@ function getTheme({ theme, name }) {
           "punctuation.separator.dictionary.key-value.json.comments"
         ],
         "settings" : {
-          "foreground" : `${hex(color.success.fg)}${_x_[10]}`,
+          "foreground" : `${hex(color.success.fg)}`,
           "fontStyle" : ""
         }
       },
@@ -1463,7 +1465,7 @@ function getTheme({ theme, name }) {
           "string.quoted.single.php"
         ],
         "settings" : {
-          "foreground" : `${hex(color.severe.fg)}${_x_[10]}`,
+          "foreground" : `${hex(color.severe.fg)}`,
           "fontStyle" : ""
         }
       },
@@ -1472,7 +1474,7 @@ function getTheme({ theme, name }) {
           "string.quoted.other.backtick.sql"
         ],
         "settings" : {
-          "foreground" : `${hex(color.severe.fg)}${_x_[10]}`,
+          "foreground" : `${hex(color.severe.fg)}`,
           "fontStyle" : ""
         }
       },
@@ -1482,7 +1484,7 @@ function getTheme({ theme, name }) {
           "entity.name.function.member"
         ],
         "settings" : {
-          "foreground" : `${hex(color.severe.fg)}${_x_[10]}`,
+          "foreground" : `${hex(color.severe.fg)}`,
           "fontStyle" : ""
         }
       },
@@ -1492,7 +1494,7 @@ function getTheme({ theme, name }) {
           "punctuation.definition.string.template.end.js"
         ],
         "settings" : {
-          "foreground" : `${hex(color.severe.fg)}${_x_[10]}`,
+          "foreground" : `${hex(color.severe.fg)}`,
           "fontStyle" : ""
         }
       },
@@ -1504,7 +1506,7 @@ function getTheme({ theme, name }) {
           "string.template.js"
         ],
         "settings" : {
-          "foreground" : `${hex(color.fg.muted)}${_x_[10]}`,
+          "foreground" : `${hex(color.fg.muted)}`,
           "fontStyle" : ""
         }
       },
@@ -1513,7 +1515,7 @@ function getTheme({ theme, name }) {
           "text.html.php"
         ],
         "settings" : {
-          "foreground" : `${hex(color.fg.muted)}${_x_[10]}`,
+          "foreground" : `${hex(color.fg.muted)}`,
           "fontStyle" : ""
         }
       },
@@ -1524,7 +1526,7 @@ function getTheme({ theme, name }) {
           "punctuation.definition.template-expression.begin.js"
         ],
         "settings" : {
-          "foreground" : `${hex(color.scale.yellow[0])}${_x_[10]}`,
+          "foreground" : `${hex(color.scale.yellow[0])}`,
           "fontStyle" : ""
         }
       },
@@ -1534,7 +1536,7 @@ function getTheme({ theme, name }) {
           "punctuation.separator.dictionary.pair.json.comments"
         ],
         "settings" : {
-          "foreground" : `${hex(color.success.fg)}${_x_[10]}`,
+          "foreground" : `${hex(color.success.fg)}`,
           "fontStyle" : ""
         }
       },
@@ -1544,7 +1546,7 @@ function getTheme({ theme, name }) {
           "punctuation.definition.string.end.php"
         ],
         "settings" : {
-          "foreground" : `${hex(color.sponsors.fg)}${_x_[10]}`,
+          "foreground" : `${hex(color.sponsors.fg)}`,
           "fontStyle" : ""
         }
       },
@@ -1553,7 +1555,7 @@ function getTheme({ theme, name }) {
           "punctuation.accessor.js"
         ],
         "settings" : {
-          "foreground" : `${hex(color.fg.default)}${_x_[10]}`
+          "foreground" : `${hex(color.fg.default)}`
         }
       },
       {
@@ -1561,7 +1563,7 @@ function getTheme({ theme, name }) {
           "punctuation.accessor.js"
         ],
         "settings" : {
-          "foreground" : `${hex(color.fg.default)}${_x_[10]}`
+          "foreground" : `${hex(color.fg.default)}`
         }
       },
       {
@@ -1569,7 +1571,7 @@ function getTheme({ theme, name }) {
           "support.type.property-name.json"
         ],
         "settings" : {
-          "foreground" : `${hex(color.done.fg)}${_x_[10]}`
+          "foreground" : `${hex(color.done.fg)}`
         }
       },
       {
@@ -1577,7 +1579,7 @@ function getTheme({ theme, name }) {
           "variable.css"
         ],
         "settings" : {
-          "foreground" : `${hex(color.done.fg)}${_x_[10]}`
+          "foreground" : `${hex(color.done.fg)}`
         }
       },
       {
@@ -1585,7 +1587,7 @@ function getTheme({ theme, name }) {
           "variable.argument.css"
         ],
         "settings" : {
-          "foreground" : `${hex(color.scale.yellow[0])}${_x_[10]}`
+          "foreground" : `${hex(color.scale.yellow[0])}`
         }
       },
       {
@@ -1594,7 +1596,7 @@ function getTheme({ theme, name }) {
           "support.constant.property-value"
         ],
         "settings" : {
-          "foreground" : `${hex(color.severe.fg)}${_x_[10]}`
+          "foreground" : `${hex(color.severe.fg)}`
         }
       },
       {
@@ -1607,7 +1609,7 @@ function getTheme({ theme, name }) {
           "punctuation.definition.entity.css"
         ],
         "settings" : {
-          "foreground" : `${hex(color.success.fg)}${_x_[10]}`
+          "foreground" : `${hex(color.success.fg)}`
         }
       },
       {
@@ -1616,7 +1618,7 @@ function getTheme({ theme, name }) {
           "punctuation.definition.string.end.css"
         ],
         "settings" : {
-          "foreground" : `${hex(color.sponsors.fg)}${_x_[10]}`
+          "foreground" : `${hex(color.sponsors.fg)}`
         }
       },
       {
@@ -1624,7 +1626,7 @@ function getTheme({ theme, name }) {
           "string.quoted.single.css"
         ],
         "settings" : {
-          "foreground" : `${hex(color.fg.muted)}${_x_[10]}`
+          "foreground" : `${hex(color.fg.muted)}`
         }
       },
       {
@@ -1641,7 +1643,7 @@ function getTheme({ theme, name }) {
           "keyword.other.unit.s.css"
         ],
         "settings" : {
-          "foreground" : `${hex(color.scale.yellow[0])}${_x_[10]}`
+          "foreground" : `${hex(color.scale.yellow[0])}`
         }
       },
       {
@@ -1649,7 +1651,7 @@ function getTheme({ theme, name }) {
           "constant.numeric.css"
         ],
         "settings" : {
-          "foreground" : `${hex(color.severe.fg)}${_x_[10]}`
+          "foreground" : `${hex(color.severe.fg)}`
         }
       },
       {
@@ -1658,7 +1660,7 @@ function getTheme({ theme, name }) {
           "entity.other.attribute-name.class.css"
         ],
         "settings" : {
-          "foreground" : `${hex(color.accent.fg)}${_x_[10]}`
+          "foreground" : `${hex(color.accent.fg)}`
         }
       },
       {
@@ -1666,7 +1668,7 @@ function getTheme({ theme, name }) {
           "entity.name.tag.css"
         ],
         "settings" : {
-          "foreground" : `${hex(color.scale.yellow[0])}${_x_[10]}`
+          "foreground" : `${hex(color.scale.yellow[0])}`
         }
       },
       {
@@ -1675,7 +1677,7 @@ function getTheme({ theme, name }) {
           "entity.other.keyframe-offset.css"
         ],
         "settings" : {
-          "foreground" : `${hex(color.accent.fg)}${_x_[10]}`
+          "foreground" : `${hex(color.accent.fg)}`
         }
       },
       {
@@ -1685,7 +1687,7 @@ function getTheme({ theme, name }) {
           "entity.other.attribute-name.class.css"
         ],
         "settings" : {
-          "foreground" : `${hex(color.sponsors.fg)}${_x_[10]}`
+          "foreground" : `${hex(color.sponsors.fg)}`
         }
       },
       {
@@ -1693,7 +1695,7 @@ function getTheme({ theme, name }) {
           "entity.other.attribute-name.pseudo-element.css"
         ],
         "settings" : {
-          "foreground" : `${hex(color.accent.fg)}${_x_[10]}`
+          "foreground" : `${hex(color.accent.fg)}`
         }
       },
       {
@@ -1702,7 +1704,7 @@ function getTheme({ theme, name }) {
           "support.constant.media.css"
         ],
         "settings" : {
-          "foreground" : `${hex(color.done.f)}${_x_[10]}`
+          "foreground" : `${hex(color.done.fg)}`
         }
       },
       {
@@ -1712,7 +1714,7 @@ function getTheme({ theme, name }) {
           "string.quoted.double.css"
         ],
         "settings" : {
-          "foreground" : `${hex(color.success.fg)}${_x_[10]}`
+          "foreground" : `${hex(color.success.fg)}`
         }
       },
       {
@@ -1720,7 +1722,7 @@ function getTheme({ theme, name }) {
           "entity.other.attribute-name.id.css"
         ],
         "settings" : {
-          "foreground" : `${hex(color.scale.blue[0])}${_x_[10]}`
+          "foreground" : `${hex(color.scale.blue[0])}`
         }
       },
       {
@@ -1728,7 +1730,7 @@ function getTheme({ theme, name }) {
           "support.function.transform.css"
         ],
         "settings" : {
-          "foreground" : `${hex(color.scale.blue[0])}${_x_[10]}`
+          "foreground" : `${hex(color.scale.blue[0])}`
         }
       },
       {
@@ -1736,31 +1738,31 @@ function getTheme({ theme, name }) {
           "entity.other.keyframe-offset.percentage.css"
         ],
         "settings" : {
-          "foreground" : `${hex(color.sponsors.fg)}${_x_[10]}`
+          "foreground" : `${hex(color.sponsors.fg)}`
         }
       },
       {
         "scope" : "token.info-token",
         "settings" : {
-          "foreground" : `${hex(color.accent.fg)}${_x_[10]}`
+          "foreground" : `${hex(color.accent.fg)}`
         }
       },
       {
         "scope" : "token.warn-token",
         "settings" : {
-          "foreground" : `${hex(color.attention.f)}${_x_[10]}`
+          "foreground" : `${hex(color.attention.fg)}`
         }
       },
       {
         "scope" : "token.error-token",
         "settings" : {
-          "foreground" : `${hex(color.danger.emphasis)}${_x_[10]}`
+          "foreground" : `${hex(color.danger.emphasis)}`
         }
       },
       {
         "scope" : "token.debug-token",
         "settings" : {
-          "foreground" : `${hex(color.done.fg)}${_x_[10]}`
+          "foreground" : `${hex(color.done.fg)}`
         }
       }
     ]
