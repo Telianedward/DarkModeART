@@ -75,11 +75,6 @@
         "label": "AtomAx mode Dark Tritanopia",
         "uiTheme": "hc-black",
         "path": "./themes/my-dark_tritanopia.json"
-      },
-      {
-        "label": "AtomAx mode System Themes",
-        "uiTheme": "hc-black",
-        "path": "./themes/my-s-dark_tritanopia.json"
       }
     ]
   },
