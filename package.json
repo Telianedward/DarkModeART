@@ -1,6 +1,6 @@
 {
-  "name": "theme-mode-art",
-  "displayName": "theme-mode-art",
+  "name": "dark-mod-art",
+  "displayName": "DarkModeART",
   "description": "Mode theme for VS Code",
   "version": "0.0.2",
   "engines": {
