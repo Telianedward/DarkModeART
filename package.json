@@ -36,7 +36,7 @@
 			{
 				"label": "AtomAx mode Light",
 				"uiTheme": "vs",
-				"path": "./themes/light.json"
+				"path": "./themes/light-default.json"
 			},
 			{
 				"label": "AtomAx mode Light High Contrast",

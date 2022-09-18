@@ -1,4 +1,4 @@
-const l = require("@primer/primitives/dist/json/colors/light.json"),
+const l = require("@primer/primitives/dist/json/colors/light-default.json"),
       lHC = require("@primer/primitives/dist/json/colors/light_high_contrast.json"),
       lC = require("@primer/primitives/dist/json/colors/light_colorblind.json"),
       lT = require("@primer/primitives/dist/json/colors/light_tritanopia.json"),
