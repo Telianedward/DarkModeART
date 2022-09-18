@@ -31,7 +31,8 @@ function getTheme({ theme, name }) {
         // _fc_ = "fbfbfd",
         // _fuc_ = "f1f1f3",   canvas.default
         // _t_ = darkThemeMq.matches?`${hex(color.canvas.subtle)}`:`${hex(color.fg.default)}`,
-        _x_ = ["00", "a1", "33", "4d", "66", "80", "99", "b3", "cd", "e6", ""],
+        //_x_ = ["00", "a1", "33", "4d", "66", "80", "99", "b3", "cd", "e6", ""],
+        _x_ = ["", "", "", "", "", "", "", "", "", "", ""],
         _u_ = themes({ l : `${hex(color.canvas.subtle)}`, lHC : `${hex(color.canvas.subtle)}`, lC : `${hex(color.canvas.subtle)}`, lT : `${hex(color.canvas.subtle)}`, d : `${hex(color.fg.default)}`, dd : `${hex(color.fg.default)}`, dhc : `${hex(color.fg.default)}`, dc : `${hex(color.fg.default)}`, dt : `${hex(color.fg.default)}` }),
         _s_ = themes({ l : `${hex(color.canvas.subtle)}`, lHC : `${hex(color.canvas.subtle)}`, lC : `${hex(color.canvas.subtle)}`, lT : `${hex(color.canvas.subtle)}`, d : `${hex(color.fg.default)}`, dd : `${hex(color.fg.default)}`, dhc : `${hex(color.fg.default)}`, dc : `${hex(color.fg.default)}`, dt : `${hex(color.fg.default)}`}),
         // _z_ = darkThemeMq.matches?'f1f1f3':'232323',
