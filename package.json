@@ -1,6 +1,6 @@
 {
   "name": "theme-mode-art",
-  "displayName": "Theme Mode ART",
+  "displayName": "theme-mode-art",
   "description": "Mode theme for VS Code",
   "version": "0.0.1",
   "engines": {
@@ -13,7 +13,7 @@
 	"preview": true,
 	"publisher": "telianedward",
 	"license": "MIT",
-	"icon": "TMA.png",
+	"icon": "AtomAx.png",
 	"galleryBanner": {
 		"color": "#232323",
 		"theme": "dark"
@@ -34,39 +34,54 @@
 	"contributes": {
 		"themes": [
 			{
-				"label": "AtomAx mode Light Default",
+				"label": "AtomAx mode Light",
 				"uiTheme": "vs",
-				"path": "./themes/light-default.json"
-			},
-			{
-				"label": "AtomAx mode Dark Default",
-				"uiTheme": "vs-dark",
-				"path": "./themes/dark-default.json"
-			},
-			{
-				"label": "AtomAx mode Dark Dimmed",
-				"uiTheme": "vs-dark",
-				"path": "./themes/dark-dimmed.json"
-			},
-			{
-				"label": "AtomAx mode Light Dimmed",
-				"uiTheme": "vs",
-				"path": "./themes/light-dimmed.json"
-			},
-			{
-				"label": "AtomAx mode Dark High Contrast",
-				"uiTheme": "hc-black",
-				"path": "./themes/dark-high-contrast.json"
+				"path": "./themes/light.json"
 			},
 			{
 				"label": "AtomAx mode Light High Contrast",
 				"uiTheme": "hc-light",
-				"path": "./themes/light-high-contrast.json"
+				"path": "./themes/light_high_contrast.json"
 			},
 			{
-				"label": "AtomAx mode your System color",
+				"label": "AtomAx mode Light Colorblind",
+				"uiTheme": "vs",
+				"path": "./themes/light_colorblind.json"
+			},
+			{
+				"label": "AtomAx mode Light Tritanopia",
+				"uiTheme": "hc-light",
+				"path": "./themes/light_tritanopia.json"
+			},
+			{
+				"label": "AtomAx mode Dark",
+				"uiTheme": "vs-dark",
+				"path": "./themes/dark.json"
+			},
+			{
+				"label": "AtomAx mode Dark Dimmed",
+				"uiTheme": "vs-dark",
+				"path": "./themes/dark_dimmed.json"
+			},
+			{
+				"label": "AtomAx mode Dark High Contrast",
 				"uiTheme": "hc-black",
-				"path": "./themes/system.json"
+				"path": "./themes/dark_high_contrast.json"
+			},
+			{
+				"label": "AtomAx mode Dark Colorblind",
+				"uiTheme": "vs-dark",
+				"path": "./themes/dark_colorblind.json"
+			},
+			{
+				"label": "AtomAx mode Dark Tritanopia",
+				"uiTheme": "hc-black",
+				"path": "./themes/dark_tritanopia.json"
+			},
+			{
+				"label": "AtomAx mode System Themes",
+				"uiTheme": "hc-black",
+				"path": "./themes/dark_tritanopia.json"
 			}
 		]
 	},

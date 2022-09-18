@@ -1,63 +1,26 @@
-const fs = require("fs").promises;
-const getTheme = require("./theme");
-const getClassicTheme = require("./classic/theme");
-
-const lightDefaultTheme = getTheme({
-  theme: "light",
-  name: "AtomAx mode Light Default",
-});
-
-const darkDefaultTheme = getTheme({
-  theme: "dark",
-  name: "AtomAx mode Dark Default",
-});
-
-const darkDimmedTheme = getTheme({
-  theme: "dimmed",
-  name: "AtomAx mode Dark Dimmed"
-})
-const lightDimmedTheme = getTheme({
-  theme: "dimmedL",
-  name: "AtomAx mode light Dimmed"
-})
-const darkHighContrastTheme = getTheme({
-  theme: "hc",
-  name: "AtomAx mode Dark High Contrast"
-})
-const lightHighContrastTheme = getTheme({
-  theme: "hcL",
-  name: "AtomAx mode Light High Contrast"
-})
-
-const systemTheme = getTheme({
-  theme: "system",
-  name: "AtomAx mode your System color"
-})
-
-// // Classic
-
-// const lightTheme = getClassicTheme({
-//   style: "light",
-//   name: "GitHub Light",
-// });
-
-// const darkTheme = getClassicTheme({
-//   style: "dark",
-//   name: "GitHub Dark",
-// });
-
-// Write themes
-
-fs.mkdir("./themes", { recursive: true })
-  .then(() => Promise.all([
-    fs.writeFile("./themes/light-default.json", JSON.stringify(lightDefaultTheme, null, 2)),
-    fs.writeFile("./themes/dark-default.json", JSON.stringify(darkDefaultTheme, null, 2)),
-    fs.writeFile("./themes/dark-dimmed.json", JSON.stringify(darkDimmedTheme, null, 2)),
-    fs.writeFile("./themes/light-dimmed.json", JSON.stringify(lightDimmedTheme, null, 2)),
-    fs.writeFile("./themes/dark-high-contrast.json", JSON.stringify(darkHighContrastTheme, null, 2)),
-    fs.writeFile("./themes/light-high-contrast.json", JSON.stringify(lightHighContrastTheme, null, 2)),
-    fs.writeFile("./themes/system.json", JSON.stringify(systemTheme, null, 2)),
-    // fs.writeFile("./themes/light.json", JSON.stringify(lightTheme, null, 2)),
-    // fs.writeFile("./themes/dark.json", JSON.stringify(darkTheme, null, 2)),
-  ]))
-  .catch(() => process.exit(1))
+const fs = require("fs").promises,
+      _gT = require("./theme"),
+      l = _gT({ theme: "l", name: "AtomAx mode Light"}),
+      lHC = _gT({ theme: "lhc",name: "AtomAx mode Light High Contrast"}),
+      lC = _gT({theme: "lc", name: "AtomAx mode Light Colorblind"}),
+      lT = _gT({theme: "lt", name: "AtomAx mode Light Tritanopia"}),
+      d = _gT({ theme: "d", name: "AtomAx mode Dark"}),
+      dD = _gT({ theme: "dd", name: "AtomAx mode Dark Dimmed"}),
+      dHC = _gT({theme: "dhc", name: "AtomAx mode Dark High Contrast"}),
+      dC = _gT({theme: "dc", name: "AtomAx mode Dark Colorblind"}),
+      dT = _gT({theme: "dt", name: "AtomAx mode Dark Tritanopia"}),
+      S = _gT({theme: "s", name: "AtomAx mode System Themes"})
+      fs.mkdir("./themes", { recursive: true })
+        .then(() => Promise.all([
+          fs.writeFile("./themes/l.json", JSON.stringify(l, null, 2)),
+          fs.writeFile("./themes/l_high_contrast.json", JSON.stringify(lHC, null, 2)),
+          fs.writeFile("./themes/l_colorblind.json", JSON.stringify(lC , null, 2)),
+          fs.writeFile("./themes/l_tritanopia.json", JSON.stringify(lT , null, 2)),
+          fs.writeFile("./themes/dark.json", JSON.stringify(d, null, 2)),
+          fs.writeFile("./themes/dark_dimmed.json", JSON.stringify(dD, null, 2)),
+          fs.writeFile("./themes/dark_high_contrast.json", JSON.stringify(dHC, null, 2)),
+          fs.writeFile("./themes/dark_colorblind.json", JSON.stringify(dC, null, 2)),
+          fs.writeFile("./themes/dark_tritanopia.json", JSON.stringify(dT, null, 2)),
+          fs.writeFile("./themes/dark.json", JSON.stringify(S, null, 2)),
+        ]))
+        .catch(() => process.exit(1))
