@@ -23,7 +23,7 @@
 		"url": "https://github.com/telianedward/DarkModeART"
 	},
 	"bugs": {
-		"url": "https://github.com/telianedward/DarkModeART//issues"
+		"url": "https://github.com/telianedward/DarkModeART/issues"
 	},
 
 	"keywords": [
@@ -34,24 +34,39 @@
 	"contributes": {
 		"themes": [
 			{
-				"label": "Mode Light Default",
+				"label": "AtomAx mode Light Default",
 				"uiTheme": "vs",
 				"path": "./themes/light-default.json"
 			},
 			{
-				"label": "Mode Dark Default",
+				"label": "AtomAx mode Dark Default",
 				"uiTheme": "vs-dark",
 				"path": "./themes/dark-default.json"
 			},
 			{
-				"label": "Mode Dark Dimmed",
+				"label": "AtomAx mode Dark Dimmed",
 				"uiTheme": "vs-dark",
 				"path": "./themes/dark-dimmed.json"
 			},
 			{
-				"label": "Mode Dark High Contrast",
+				"label": "AtomAx mode Light Dimmed",
+				"uiTheme": "vs",
+				"path": "./themes/light-dimmed.json"
+			},
+			{
+				"label": "AtomAx mode Dark High Contrast",
 				"uiTheme": "hc-black",
 				"path": "./themes/dark-high-contrast.json"
+			},
+			{
+				"label": "AtomAx mode Light High Contrast",
+				"uiTheme": "hc-light",
+				"path": "./themes/light-high-contrast.json"
+			},
+			{
+				"label": "AtomAx mode your System color",
+				"uiTheme": "hc-black",
+				"path": "./themes/system.json"
 			}
 		]
 	},
