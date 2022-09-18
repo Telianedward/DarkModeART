@@ -24,7 +24,7 @@ function getTheme({ theme, name }) {
   const themes = (options) => options[theme], // Usage : themes({ l : "lightblue", d : "darkblue", dd : "royalblue", hc : "blue" })
         color = getColors(theme), // Usage : color.fg.default
         scale = color.scale, // Usage : scale.blue[6]
-        darkThemeMq = window.matchMedia("(prefers-color-scheme : dark)"),
+        darkThemeMq = true),
         // _bc_ = "171717",
         // _boc_ = "232323",
         // _fc_ = "fbfbfd",
