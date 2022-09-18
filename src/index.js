@@ -1,15 +1,15 @@
 const fs = require("fs").promises;
-const   _gT = require("./theme");
-const   l = _gT({ theme: "l", name: "AtomAx mode Light"});
-const    lHC = _gT({ theme: "lhc",name: "AtomAx mode Light High Contrast"});
-const    lC = _gT({theme: "lc", name: "AtomAx mode Light Colorblind"});
-const  lT = _gT({theme: "lt", name: "AtomAx mode Light Tritanopia"});
-const  d = _gT({ theme: "d", name: "AtomAx mode Dark"});
-const   dD = _gT({ theme: "dd", name: "AtomAx mode Dark Dimmed"});
-const   dHC = _gT({theme: "dhc", name: "AtomAx mode Dark High Contrast"});
-const   dC = _gT({theme: "dc", name: "AtomAx mode Dark Colorblind"});
-const  dT = _gT({theme: "dt", name: "AtomAx mode Dark Tritanopia"});
-const   S = _gT({theme: "s", name: "AtomAx mode System Themes"});
+const   getTheme = require("./theme");
+const   l = getTheme({ theme: "l", name: "AtomAx mode Light"});
+const    lHC = getTheme({ theme: "lhc",name: "AtomAx mode Light High Contrast"});
+const    lC = getTheme({theme: "lc", name: "AtomAx mode Light Colorblind"});
+const  lT = getTheme({theme: "lt", name: "AtomAx mode Light Tritanopia"});
+const  d = getTheme({ theme: "d", name: "AtomAx mode Dark"});
+const   dD = getTheme({ theme: "dd", name: "AtomAx mode Dark Dimmed"});
+const   dHC = getTheme({theme: "dhc", name: "AtomAx mode Dark High Contrast"});
+const   dC = getTheme({theme: "dc", name: "AtomAx mode Dark Colorblind"});
+const  dT = getTheme({theme: "dt", name: "AtomAx mode Dark Tritanopia"});
+const   S = getTheme({theme: "s", name: "AtomAx mode System Themes"});
 
 
 
