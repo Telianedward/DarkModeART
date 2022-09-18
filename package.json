@@ -2,7 +2,7 @@
   "name": "theme-mode-art",
   "displayName": "theme-mode-art",
   "description": "Mode theme for VS Code",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.71.0"
   },
