@@ -11,7 +11,7 @@ const fs = require("fs").promises,
       dT = _gT({theme: "dt", name: "AtomAx mode Dark Tritanopia"}),
       S = _gT({theme: "s", name: "AtomAx mode System Themes"})
 
-
+console.log(_gT);
 
 
       fs.mkdir("./themes", { recursive: true })
