@@ -9,90 +9,92 @@
   "categories": [
     "Themes"
   ],
-
-	"preview": true,
-	"publisher": "telianedward",
-	"license": "MIT",
-	"icon": "AtomAx.png",
-	"galleryBanner": {
-		"color": "#232323",
-		"theme": "dark"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/telianedward/DarkModeART"
-	},
-	"bugs": {
-		"url": "https://github.com/telianedward/DarkModeART/issues"
-	},
-
-	"keywords": [
-		"theme",
-		"light",
-		"dark"
-	],
-	"contributes": {
-		"themes": [
-			{
-				"label": "AtomAx mode Light",
-				"uiTheme": "vs",
-				"path": "./themes/my-light.json"
-			},
-			{
-				"label": "AtomAx mode Light High Contrast",
-				"uiTheme": "hc-light",
-				"path": "./themes/my-light_high_contrast.json"
-			},
-			{
-				"label": "AtomAx mode Light Colorblind",
-				"uiTheme": "vs",
-				"path": "./themes/my-light_colorblind.json"
-			},
-			{
-				"label": "AtomAx mode Light Tritanopia",
-				"uiTheme": "hc-light",
-				"path": "./themes/my-light_tritanopia.json"
-			},
-			{
-				"label": "AtomAx mode Dark",
-				"uiTheme": "vs-dark",
-				"path": "./themes/my-dark.json"
-			},
-			{
-				"label": "AtomAx mode Dark Dimmed",
-				"uiTheme": "vs-dark",
-				"path": "./themes/my-dark_dimmed.json"
-			},
-			{
-				"label": "AtomAx mode Dark High Contrast",
-				"uiTheme": "hc-black",
-				"path": "./themes/my-dark_high_contrast.json"
-			},
-			{
-				"label": "AtomAx mode Dark Colorblind",
-				"uiTheme": "vs-dark",
-				"path": "./themes/my-dark_colorblind.json"
-			},
-			{
-				"label": "AtomAx mode Dark Tritanopia",
-				"uiTheme": "hc-black",
-				"path": "./themes/my-dark_tritanopia.json"
-			},
-			{
-				"label": "AtomAx mode System Themes",
-				"uiTheme": "hc-black",
-				"path": "./themes/my-s-dark_tritanopia.json"
-			}
-		]
-	},
-	"devDependencies": {
-		"@primer/primitives": "4.7.1",
-		"chroma-js": "^2.1.0",
-		"color": "^3.1.2",
-		"nodemon": "^2.0.3"
-	},
-	"scripts": {
-		"start": "nodemon --watch src src/index.js",
-		"build": "node src/index.js"
-	}
+  "preview": true,
+  "publisher": "telianedward",
+  "license": "MIT",
+  "icon": "AtomAx.png",
+  "galleryBanner": {
+    "color": "#232323",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/telianedward/DarkModeART"
+  },
+  "bugs": {
+    "url": "https://github.com/telianedward/DarkModeART/issues"
+  },
+  "keywords": [
+    "theme",
+    "light",
+    "dark"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "AtomAx mode Light",
+        "uiTheme": "vs",
+        "path": "./themes/my-light.json"
+      },
+      {
+        "label": "AtomAx mode Light High Contrast",
+        "uiTheme": "hc-light",
+        "path": "./themes/my-light_high_contrast.json"
+      },
+      {
+        "label": "AtomAx mode Light Colorblind",
+        "uiTheme": "vs",
+        "path": "./themes/my-light_colorblind.json"
+      },
+      {
+        "label": "AtomAx mode Light Tritanopia",
+        "uiTheme": "hc-light",
+        "path": "./themes/my-light_tritanopia.json"
+      },
+      {
+        "label": "AtomAx mode Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/my-dark.json"
+      },
+      {
+        "label": "AtomAx mode Dark Dimmed",
+        "uiTheme": "vs-dark",
+        "path": "./themes/my-dark_dimmed.json"
+      },
+      {
+        "label": "AtomAx mode Dark High Contrast",
+        "uiTheme": "hc-black",
+        "path": "./themes/my-dark_high_contrast.json"
+      },
+      {
+        "label": "AtomAx mode Dark Colorblind",
+        "uiTheme": "vs-dark",
+        "path": "./themes/my-dark_colorblind.json"
+      },
+      {
+        "label": "AtomAx mode Dark Tritanopia",
+        "uiTheme": "hc-black",
+        "path": "./themes/my-dark_tritanopia.json"
+      },
+      {
+        "label": "AtomAx mode System Themes",
+        "uiTheme": "hc-black",
+        "path": "./themes/my-s-dark_tritanopia.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@primer/primitives": "4.7.1",
+    "chroma-js": "^2.1.0",
+    "color": "^3.1.2",
+    "nodemon": "^2.0.3"
+  },
+  "scripts": {
+    "start": "nodemon --watch src src/index.js",
+    "build": "node src/index.js"
+  },
+  "dependencies": {
+    "latest": "^0.2.0",
+    "lodash": "^4.17.21"
+  }
 }
