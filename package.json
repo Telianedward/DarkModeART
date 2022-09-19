@@ -1,7 +1,7 @@
 {
-  "name": "dark-mod-art",
-  "displayName": "DarkModeART",
-  "description": "Mode theme for VS Code",
+  "name": "Atomax",
+  "displayName": "AtomAx Theme",
+  "description": "AtomAx theme for VS Code",
   "version": "0.0.3",
   "engines": {
     "vscode": "^1.71.0"
