@@ -1,11 +1,11 @@
-const chroma = require("chroma-js");
-const { getColors } = require("./colors");
+const _ch = require("chroma-js");
+const { _gC } = require("./colors");
 
 // Convert to hex
 // VS Code doesn't support other formats like hsl, rgba etc.
 
-function hex(color) {
-  return chroma(color).hex();
+   hex = (color)=>{
+  return _ch(color).hex();
 }
 
 
@@ -23,15 +23,8 @@ function hex(color) {
 
     _gT = ({ theme, name }) => {
   const themes = (options) => options[theme], // Usage : themes({ l : "lightblue", d : "darkblue", dd : "royalblue", hc : "blue" })
-        color = getColors(theme), // Usage : color.fg.default
+        color = _gC(theme), // Usage : color.fg.default
         scale = color.scale, // Usage : scale.blue[6]
-        // darkThemeMq = window.matchMedia("(prefers-color-scheme : dark)"),
-        // _bc_ = "171717",
-        // _boc_ = "232323",
-        // _fc_ = "fbfbfd",
-        // _fuc_ = "f1f1f3",   canvas.default
-        // _t_ = darkThemeMq.matches?`${hex(color.canvas.subtle)}`:`${hex(color.fg.default)}`,
-        //_x_ = ["00", "a1", "33", "4d", "66", "80", "99", "b3", "cd", "e6", ""],
         _x_ = ["", "", "", "", "", "", "", "", "", "", ""],
         _u_ = themes({ l : `${hex(color.canvas.subtle)}`, lHC : `${hex(color.canvas.subtle)}`, lC : `${hex(color.canvas.subtle)}`, lT : `${hex(color.canvas.subtle)}`, d : `${hex(color.fg.default)}`, dd : `${hex(color.fg.default)}`, dhc : `${hex(color.fg.default)}`, dc : `${hex(color.fg.default)}`, dt : `${hex(color.fg.default)}` }),
         _s_ = themes({ l : `${hex(color.canvas.subtle)}`, lHC : `${hex(color.canvas.subtle)}`, lC : `${hex(color.canvas.subtle)}`, lT : `${hex(color.canvas.subtle)}`, d : `${hex(color.fg.default)}`, dd : `${hex(color.fg.default)}`, dhc : `${hex(color.fg.default)}`, dc : `${hex(color.fg.default)}`, dt : `${hex(color.fg.default)}`}),
@@ -41,13 +34,6 @@ function hex(color) {
         _boc_ = themes({ l : `${hex(color.fg.muted)}`, lHC : `${hex(color.fg.muted)}`, lC : `${hex(color.fg.muted)}`, lT : `${hex(color.fg.muted)}`, d : `${hex(color.fg.default)}`, dd : `${hex(color.fg.default)}`, dhc : `${hex(color.fg.default)}`, dc : `${hex(color.fg.default)}`, dt : `${hex(color.fg.default)}` }),
         _fc_ = themes({ l : `${hex(color.canvas.inset)}`, lHC : `${hex(color.canvas.inset)}`, lC : `${hex(color.canvas.inset)}`, lT : `${hex(color.canvas.inset)}`, d : `${hex(color.fg.default)}`, dd : `${hex(color.fg.default)}`, dhc : `${hex(color.fg.default)}`, dc : `${hex(color.fg.default)}`, dt : `${hex(color.fg.default)}`}),
         _fuc_  = themes({ l : `${hex(color.canvas.subtle)}`, lHC : `${hex(color.canvas.subtle)}`, lC : `${hex(color.canvas.subtle)}`, lT : `${hex(color.canvas.subtle)}`, d : `${hex(color.fg.muted)}`, dd : `${hex(color.fg.muted)}`, dhc : `${hex(color.fg.muted)}`, dc : `${hex(color.fg.muted)}`, dt : `${hex(color.fg.muted)}`}),
-
-        // _fuc_ = "f1f1f3",
-        // _t_ = darkThemeMq.matches?'171717':'fbfbfd',
-        // _u_ = darkThemeMq.matches?'232323':'f1f1f3',
-        // _s_ = darkThemeMq.matches?'fbfbfd':'171717',
-        // _z_ = darkThemeMq.matches?'f1f1f3':'232323',
-      
         _a_ =  themes({ l : `${_bc_}`, lHC : `${_bc_}`, lC : `${_bc_}`, lT : `${_bc_}`, d : `${_fc_}`, dd : `${_fc_}`, dhc : `${_fc_}`, dc : `${_fc_}`, dt : `${_fc_}`}),
         _b_ =  themes({ l : `${_fc_}`, lHC : `${_fc_}`, lC : `${_fc_}`, lT : `${_fc_}`, d : `${_bc_}`, dd : `${_bc_}`, dhc : `${_bc_}`, dc : `${_bc_}`, dt : `${_bc_}`}),
         _c_ =  themes({ l : `${_fuc_}`, lHC : `${_fuc_}`, lC : `${_fuc_}`, lT : `${_fuc_}`, d : `${_boc_}`, dd : `${_boc_}`, dhc : `${_boc_}`, dc : `${_boc_}`, dt : `${_boc_}`}),
@@ -720,13 +706,13 @@ function hex(color) {
       "widget.shadow" :  _c_,
       "window.activeBorder" : _a_,
       "window.inactiveBorder" : _a_,
-      //"debugConsole.errorForeground" : `${hex(color.danger.muted)}`,
-      //"debugConsole.infoForeground" : `${hex(color.scale.blue[0])}`,
-      //"debugConsole.sourceForeground" : _d_,
-      //"debugConsole.warningForeground" : `${hex(color.danger.muted)}`,
-      //"debugConsoleInputIcon.foreground" : _d_,
-      //"debugIcon.breakpointCurrentStackframeForeground" : "#ffcc00",
-      //"debugIcon.breakpointDisabledForeground" : "#848484",
+      //   "debugConsole.errorForeground" : `${hex(color.danger.muted)}`,
+      //   "debugConsole.infoForeground" : `${hex(color.scale.blue[0])}`,
+      // "debugConsole.sourceForeground" : _d_,
+      // "debugConsole.warningForeground" : `${hex(color.danger.muted)}`,
+      // "debugConsoleInputIcon.foreground" : _d_, 
+      // "debugIcon.breakpointCurrentStackframeForeground" : `${hex(color.scale.yellow[1])}`,
+      //   "debugIcon.breakpointDisabledForeground" : "#848484",
       //"debugIcon.breakpointForeground" : "#e51400",
       //"debugIcon.breakpointStackframeForeground" : "#89d185",
       //"debugIcon.breakpointUnverifiedForeground" : "#848484",
