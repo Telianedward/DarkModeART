@@ -1,4 +1,4 @@
-const fs = require("fs").promises,
+const fs = require("fs").promises
       getTheme = require("./theme"),
       l = getTheme({ theme: "l", name: "AtomAx mode Light"}),
       lHC = getTheme({ theme: "lhc",name: "AtomAx mode Light High Contrast"}),
