@@ -9,8 +9,6 @@ const fs = require("fs").promises,
       dHC = _gT({theme: "dhc", name: "AtomAx mode Dark High Contrast"}),
       dC = _gT({theme: "dc", name: "AtomAx mode Dark Colorblind"}),
       dT = _gT({theme: "dt", name: "AtomAx mode Dark Tritanopia"})
-// const   S = _gT({theme: "s", name: "AtomAx mode System Themes"});
-
   fs.mkdir("./themes", { recursive: true })
     .then(() => Promise.all([
       fs.writeFile("./themes/my-light.json", JSON.stringify(l, null, 2)),
